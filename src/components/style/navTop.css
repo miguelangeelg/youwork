@@ -1,0 +1,86 @@
+.navbar-expand-lg.p-2 {
+  background: #fefefe;
+  border-radius: 12px;
+  width: 64%;
+  position: relative;
+  left: 24%;
+  position: fixed;
+  z-index: 100;
+}
+
+#inputSearchNavbar {
+  border-radius: 12px;
+  outline: none !important;
+  border: 1px solid;
+  border-color: #757575 !important;
+  color: #da2021;
+  outline-style: none;
+  box-shadow: none;
+  border-color: transparent;
+  background: #fefefe;
+  width: 230px;
+}
+
+.contentNav {
+  text-align: center;
+  align-content: center;
+}
+
+.userAvatar {
+  width: 45px;
+  height: 45px;
+  border-radius: 100%;
+  margin-left: 10px;
+  margin-right: 10px;
+  cursor: pointer;
+}
+
+.userAvatar:hover {
+  transition: all 0.5s ease;
+  width: 47px;
+  height: 47px;
+}
+
+/* #navbarNav{
+    position: absolute;
+    left: 90%;
+} */
+
+#navbarNav i {
+  font-size: 25px;
+  padding-left: 5px;
+  padding-right: 5px;
+  color: #757575;
+  cursor: pointer;
+}
+
+#navbarNav i:hover {
+  transition: all 0.5s ease;
+  font-size: 30px;
+  color: #da2021;
+}
+
+.tooltipProfile {
+  position: absolute;
+  top: 40px;
+  right: calc(10% + 15px);
+  z-index: 3;
+  background: #fff;
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.3);
+  padding: 6px 12px;
+  border-radius: 4px;
+  font-size: 15px;
+  font-weight: 400;
+  opacity: 0;
+  white-space: nowrap;
+  pointer-events: none;
+  transition: 0s;
+}
+
+li:hover .tooltipProfile {
+  opacity: 1;
+  pointer-events: auto;
+  transition: all 0.4s ease;
+  top: 78px;
+  transform: translateY(-50%);
+}

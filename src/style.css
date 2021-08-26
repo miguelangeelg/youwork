@@ -1,0 +1,18 @@
+body{
+    background: #f9fafe;
+    font-family: 'Questrial', sans-serif;
+}
+
+
+.colNavChat{
+    padding-right: 0;
+}
+
+.content{
+    text-align: center;
+    align-content: center;
+}
+
+.contentPage{
+    margin-top: 6%;
+}

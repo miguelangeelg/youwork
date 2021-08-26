@@ -1,0 +1,67 @@
+import React, { Component } from 'react';
+import '../components/style/home.css';
+import carousel1 from '../assets/img/home/carousel1.png'
+import carousel2 from '../assets/img/home/carousel2.png'
+import carousel3 from '../assets/img/home/carousel3.png'
+import carousel4 from '../assets/img/home/carousel4.png'
+import CorouselCards from '../components/CorouselCards';
+import CorouselCardsPerson from '../components/CorouselCardsPerson';
+
+
+class Home extends Component {
+    render() {
+        return (
+            <div className="p-2">
+                <div className="Home row">
+                    <div id="carouselExampleFade" className="carousel slide carousel-fade" data-bs-ride="carousel">
+                        <div className="carousel-inner">
+                            <div className="carousel-item active">
+                                <img src={carousel1} className="d-block w-100" alt="..." />
+                            </div>
+                            <div className="carousel-item">
+                                <img src={carousel2} className="d-block w-100" alt="..." />
+                            </div>
+                            <div className="carousel-item">
+                                <img src={carousel3} className="d-block w-100" alt="..." />
+                            </div>
+                            <div className="carousel-item">
+                                <img src={carousel4} className="d-block w-100" alt="..." />
+                            </div>
+                        </div>
+                        <button className="carousel-control-prev" type="button" data-bs-target="#carouselExampleFade" data-bs-slide="prev">
+                            <span className="carousel-control-prev-icon" aria-hidden="true"></span>
+                            <span className="visually-hidden">Previous</span>
+                        </button>
+                        <button className="carousel-control-next" type="button" data-bs-target="#carouselExampleFade" data-bs-slide="next">
+                            <span className="carousel-control-next-icon" aria-hidden="true"></span>
+                            <span className="visually-hidden">Next</span>
+                        </button>
+                    </div>
+                </div>
+                <div className="corouseldiv row p-3">
+                    <div className="titleBetterJobs ">
+                        <h4 className="d-flex justify-content-start">Trabajos recomendados
+                            <i className="justify-content-start" class='bx bxs-star'></i>
+                        </h4> <small>Deliza hacia la izquierda para ver mas... </small>
+                        <hr />
+                    </div>
+                    <CorouselCards />
+                </div>
+                <div className="corouseldiv row p-3">
+                    <div className="titleBetterJobs ">
+                        <h4 className="d-flex justify-content-start">Personas recomendadas
+                            <i className="justify-content-start" class='bx bxs-star'></i>
+                        </h4>
+                        <small>Deliza hacia la izquierda para ver mas... </small>
+                        <hr />
+                    </div>
+                    <CorouselCardsPerson />
+                </div>
+            </div>
+
+        )
+    }
+
+}
+
+export default Home;

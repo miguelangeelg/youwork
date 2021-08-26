@@ -1,0 +1,62 @@
+.cardBetterJob {
+  position: relative;
+  background: white;
+  height: 200px;
+  width: 200px;
+  border-radius: 12px;
+  border-width: 1px;
+  border-color: white;
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.3);
+  margin-right: 8px;
+  margin-left: 8px;
+  cursor: pointer;
+  width: 95%;
+  height: 95%;
+}
+
+.containerCarousel {
+  width: 100%;
+}
+
+.titleJobCard {
+  border-radius: unset;
+  position: relative;
+  background: #da2021;
+  height: auto;
+}
+
+.titleJobCard .titleText {
+  font-size: 17px;
+  padding-top: 7px;
+  color: white;
+}
+
+.cardBetterJob .bodyCardJob {
+  padding-top: 10px;
+  margin: 10px;
+}
+
+.bodyCardJob .description {
+  height: 140px;
+}
+
+.bodyCardJob .description small {
+  color: rgb(158, 158, 158);
+  font-size: 13px;
+}
+
+.cardBetterJob button {
+  position: relative;
+  background: #fefefe;
+  color: #da2021;
+  border-radius: 12px;
+  border-color: transparent;
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.3);
+  bottom: 5px;
+}
+
+.cardBetterJob button:hover {
+  background: #da2021;
+  color: #fefefe;
+  transition: all 0.1s ease;
+}
