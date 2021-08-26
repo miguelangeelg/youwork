@@ -1,6 +1,6 @@
 import React, {Component} from 'react';
 import './style/corouselCards.css';
-import userThree from '../assets/img/users/user3.png';
+// import userThree from '../assets/img/users/user3.png';
 import SwiperCore, { Navigation, Pagination, Scrollbar, A11y } from 'swiper';
 import { Swiper, SwiperSlide } from 'swiper/react';
 import 'swiper/swiper.scss';
@@ -19,8 +19,8 @@ class CorouselCards extends Component{
               <Swiper
               spaceBetween={3}
               slidesPerView={3}
-              onSlideChange={() => console.log('slide change')}
-              onSwiper={(swiper) => console.log(swiper)}
+              // onSlideChange={() => console.log('slide change')}
+              // onSwiper={(swiper) => console.log(swiper)}
               style={{width:"100%", height:259}}
             >
               <SwiperSlide className="betterJobs" > 

@@ -1,9 +1,9 @@
 import React, { Component } from 'react';
 import './style/nav.css';
 import youWorkImg from '../assets/img/YourWork.png';
-import userOne from '../assets/img/users/user1.jpeg';
-import userTwo from '../assets/img/users/user2.jpeg';
-import userThree from '../assets/img/users/user3.png';
+// import userOne from '../assets/img/users/user1.jpeg';
+// import userTwo from '../assets/img/users/user2.jpeg';
+// import userThree from '../assets/img/users/user3.png';
 class Nav extends Component {
     render() {
         return (
@@ -16,7 +16,7 @@ class Nav extends Component {
                     </div>
                     <ul className="nav-list">
                         <li className="liHome">
-                            <img className="youWorkImg" src={youWorkImg} />
+                            <img  className="youWorkImg" src={youWorkImg} alt="some" />
                             <span className="tooltip">You Work Inicio</span>
                         </li>
                         <li>
@@ -32,28 +32,28 @@ class Nav extends Component {
                             <span className="tooltip">Buscar Empleo</span>
                         </li>
                         <li>
-                            <a href="#">
+                            <a href="/#">
                                 <i className='bx bxs-to-top'></i>
                                 <span className="links_name">Publicar Empleo</span>
                             </a>
                             <span className="tooltip">Publicar Empleo</span>
                         </li>
                         <li>
-                            <a href="#">
+                            <a href="/#">
                                 <i className='bx bxs-user'></i>
                                 <span className="links_name">Buscar Empleado</span>
                             </a>
                             <span className="tooltip">Buscar Empleado</span>
                         </li>
                         <li>
-                            <a href="#">
+                            <a href="/#">
                                 <i className='bx bxs-user-check'></i>
                                 <span className="links_name">Aplicaciones</span>
                             </a>
                             <span className="tooltip">Aplicaciones</span>
                         </li>
                         <li>
-                            <a href="#">
+                            <a href="/#">
                                 <i className='bx bxs-hot'></i>
                                 <span className="links_name">Planes Premium</span>
                             </a>

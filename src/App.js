@@ -1,7 +1,7 @@
 import Nav from './components/Nav'
 import NavChats from './components/NavChats'
 import Home from './routes/Home'
-import SearchJob from './routes/SearchJob'
+// import SearchJob from './routes/SearchJob'
 import NavTop from './components/NavTop'
 import { BrowserRouter as Router, Route } from 'react-router-dom'
 import './style.css'
