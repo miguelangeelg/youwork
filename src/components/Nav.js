@@ -1,4 +1,4 @@
-import React, { Component } from 'react';
+import React from 'react';
 import './style/nav.css';
 import youWorkImg from '../assets/img/YourWork.png';
 // import userOne from '../assets/img/users/user1.jpeg';
@@ -79,7 +79,7 @@ const btnSearch = () => {
 }
 
 const goToHome = () => {
-    window.location.href = "/";
+    window.location.href = "/#";
 }
 
 

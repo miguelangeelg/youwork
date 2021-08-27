@@ -1,7 +1,7 @@
-import React, {Component} from 'react';
+import React from 'react';
 import '../components/style/searchJob.css';
 
-class SearchJob extends Component{
+const SearchJob = () => {
     render(){
         return(
             <div className="searchJob">

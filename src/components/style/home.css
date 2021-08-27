@@ -118,3 +118,7 @@ h4 .bxs-star {
 .titleBetterJobs hr {
   width: 100%;
 }
+
+#carouselExampleFade{
+  z-index: 0;
+}

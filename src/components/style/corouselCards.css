@@ -19,7 +19,7 @@
 }
 
 .titleJobCard {
-  border-radius: unset;
+  border-radius: 12px 12px 0 0px !important;
   position: relative;
   background: #da2021;
   height: auto;

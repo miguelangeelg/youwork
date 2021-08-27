@@ -1,4 +1,4 @@
-import React, { Component } from 'react';
+import React from 'react';
 import './style/navChats.css';
 import userOne from '../assets/img/users/user1.jpeg';
 import userTwo from '../assets/img/users/user2.jpeg';

@@ -1,4 +1,4 @@
-import React, { Component } from 'react';
+import React from 'react';
 import './style/navTop.css';
 
 import userThree from '../assets/img/users/user3.png';
