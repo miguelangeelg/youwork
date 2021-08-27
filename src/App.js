@@ -26,7 +26,7 @@ function App () {
             </div>
           </div>
           <div className='col-2 d-flex justify-content-end colNavChat'>
-            <NavChats />
+            {/* <NavChats /> */}
           </div>
         </div>
         {/* <Route path="/" exact component={Home}/>  */}
