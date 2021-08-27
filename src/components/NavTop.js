@@ -3,8 +3,7 @@ import './style/navTop.css';
 
 import userThree from '../assets/img/users/user3.png';
 
-class NavTop extends Component {
-    render() {
+const  NavTop = ()=> {
         return (
             <nav className="navbar-expand-lg  p-2">
                 <div className="row">
@@ -37,8 +36,6 @@ class NavTop extends Component {
                 </div>
             </nav>
         )
-    }
-
 }
 
 export default NavTop;

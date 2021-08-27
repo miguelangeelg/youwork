@@ -4,9 +4,8 @@ import './style/jobList.css';
 
 
 const list = ["tarjeta1", "tarjeta2", "tarjeta3", "tarjeta4"];
-class JobList extends Component {
+const JobList = () => {
     
-    render() {
         return (
             <div>
             <div className="row">
@@ -22,7 +21,6 @@ class JobList extends Component {
             </div>
         </div>
         )
-    }
 
 }
 

@@ -1,6 +1,5 @@
 import React from 'react';
 import './style/corouselCardsPerson.css';
-// import SwiperCore, { Navigation, Pagination, Scrollbar, A11y } from 'swiper';
 import { Swiper, SwiperSlide } from 'swiper/react';
 import 'swiper/swiper.scss';
 import 'swiper/components/navigation/navigation.scss';
@@ -14,11 +13,6 @@ import userFive from '../assets/img/users/user5.jpeg';
 import userSix from '../assets/img/users/user6.jpeg';
 // import userSeven from '../assets/img/users/user7.jpeg';
 // import userEight from '../assets/img/users/user8.jpeg';
-
-
-// import Rating from 'react-rating';
-
-
 
 const list = Object.entries({
     "Jualian Perez": {

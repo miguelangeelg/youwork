@@ -1,6 +1,5 @@
-import React, {Component} from 'react';
+import React from 'react';
 import './style/corouselCards.css';
-// import userThree from '../assets/img/users/user3.png';
 import SwiperCore, { Navigation, Pagination, Scrollbar, A11y } from 'swiper';
 import { Swiper, SwiperSlide } from 'swiper/react';
 import 'swiper/swiper.scss';
@@ -11,9 +10,8 @@ import 'swiper/components/scrollbar/scrollbar.scss';
 SwiperCore.use([Navigation, Pagination, Scrollbar, A11y]);
 
 
-class CorouselCards extends Component{
+const CorouselCards = ()=>{
 
-    render(){
         return(
             <div className="containerCarousel">
               <Swiper
@@ -132,7 +130,6 @@ class CorouselCards extends Component{
             </Swiper>
         </div>
         )
-    }
 
 }
 

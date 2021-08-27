@@ -9,8 +9,7 @@ import JobList from '../components/JobList';
 import CorouselCardsPerson from '../components/CorouselCardsPerson';
 
 
-class Home extends Component {
-    render() {
+const Home = () => {
         return (
             <div className="p-2">
                 <div className="Home row">
@@ -70,7 +69,6 @@ class Home extends Component {
             </div>
 
         )
-    }
 
 }
 

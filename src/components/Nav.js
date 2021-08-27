@@ -4,15 +4,14 @@ import youWorkImg from '../assets/img/YourWork.png';
 // import userOne from '../assets/img/users/user1.jpeg';
 // import userTwo from '../assets/img/users/user2.jpeg';
 // import userThree from '../assets/img/users/user3.png';
-class Nav extends Component {
-    render() {
+const Nav = () =>{
         return (
             <div>
                 <div className="sidebar active">
                     <div className="logo-details">
                         {/* <i className='bx bxl-c-plus-plus icon'></i> */}
-                        <div className="logo_name" onClick={this.goToHome} >You Work</div>
-                        <i className='bx bx-menu' id="btn" onClick={this.btnActive} ></i>
+                        <div className="logo_name" onClick={goToHome} >You Work</div>
+                        <i className='bx bx-menu' id="btn" onClick={btnActive} ></i>
                     </div>
                     <ul className="nav-list">
                         <li className="liHome">
@@ -20,7 +19,7 @@ class Nav extends Component {
                             <span className="tooltip">You Work Inicio</span>
                         </li>
                         <li>
-                            <i className='bx bx-search firsticon' onClick={this.btnSearch} ></i>
+                            <i className='bx bx-search firsticon' onClick={btnSearch} ></i>
                             <input type="text" placeholder="Buscar..." />
                             <span className="tooltip">Buscar</span>
                         </li>
@@ -66,23 +65,23 @@ class Nav extends Component {
                 </div>
             </div>
         )
-    }
-
-
-    btnActive() {
-        let sidebar = document.querySelector(".sidebar");
-        sidebar.classList.toggle("active");
-    }
-
-    btnSearch() {
-        let sidebar = document.querySelector(".sidebar");
-        sidebar.classList.toggle("active");
-    }
-
-    goToHome() {
-        window.location.href = "/";
-    }
 
 }
+
+const btnActive = () => {
+    let sidebar = document.querySelector(".sidebar");
+    sidebar.classList.toggle("active");
+}
+
+const btnSearch = () => {
+    let sidebar = document.querySelector(".sidebar");
+    sidebar.classList.toggle("active");
+}
+
+const goToHome = () => {
+    window.location.href = "/";
+}
+
+
 
 export default Nav;

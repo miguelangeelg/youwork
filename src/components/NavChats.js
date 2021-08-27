@@ -4,8 +4,7 @@ import userOne from '../assets/img/users/user1.jpeg';
 import userTwo from '../assets/img/users/user2.jpeg';
 import userThree from '../assets/img/users/user3.png';
 
-class Nav extends Component {
-    render() {
+const Nav = () => {
         return (
             <div className="navChats">
                 <div className="sidebar2 active">
@@ -45,8 +44,6 @@ class Nav extends Component {
             </div>
 
         )
-    }
-
 }
 
 export default Nav;
