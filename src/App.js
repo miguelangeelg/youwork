@@ -1,5 +1,5 @@
 import Nav from './components/Nav'
-import NavChats from './components/NavChats'
+// import NavChats from './components/NavChats'
 import Home from './routes/Home'
 // import SearchJob from './routes/SearchJob'
 import NavTop from './components/NavTop'
