@@ -60,7 +60,7 @@ const Nav = () => {
                                 <li key={user[1].id}>
                                     <a href="/#">
                                         <img alt="some" src={user[1].photo} />
-                                        { user[1].status == "active" ? (
+                                        { user[1].status === "active" ? (
                                             <span className="position-absolute  p-1 bg-success border  rounded-circle online"></span>
                                         ) : (
                                             <span className="position-absolute  p-1 bg-danger border  rounded-circle online"></span>
