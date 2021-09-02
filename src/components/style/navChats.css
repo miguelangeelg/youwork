@@ -103,7 +103,7 @@
   position: absolute;
   top: -20px;
   right: calc(100% + 15px);
-  z-index: 100;
+  z-index: 110;
   background: #fff;
   box-shadow: 0 5px 10px rgba(0, 0, 0, 0.3);
   padding: 6px 12px;

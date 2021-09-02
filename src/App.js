@@ -3,9 +3,10 @@ import NavChats from './components/NavChats'
 import Home from './routes/Home'
 // import SearchJob from './routes/SearchJob'
 import NavTop from './components/NavTop'
+import NavMobile from './components/NavMobile'
 import { BrowserRouter as Router, Route } from 'react-router-dom'
 import './style.css'
-function App () {
+function App() {
 
   const btnActive = () => {
     let sidebar = document.querySelector(".sidebar");
@@ -15,21 +16,25 @@ function App () {
     if (sidebar.className !== "sidebar active") {
       colNav.className = "col-2 colNav";
     } else {
-      colNav.className = "col-3 colNav";
+      colNav.className = "col-3 colNav desktopStyle";
     }
   }
 
   return (
     <Router>
       <div className='container-fluid'>
-        <div className='row'>
-          <div className='col-3 colNav'>
-            <Nav btnActiveFunction = {btnActive} />
+        <div className='row mainDiv'>
+          <div className='col-3 colNav desktopStyle'>
+            <Nav btnActiveFunction={btnActive} />
           </div>
           <div className='col-8 content'>
             <div className='row'>
-              <div className='col'>
+              <div className='col desktopStyle'>
                 <NavTop />
+              </div>
+              <div className="col mobileStyle">
+                <NavMobile />
+
               </div>
             </div>
             <div className='row contentPage'>
@@ -38,7 +43,7 @@ function App () {
               </div>
             </div>
           </div>
-          <div className='col-2 d-flex justify-content-end colNavChat'>
+          <div className='col-2 d-flex justify-content-end colNavChat desktopStyle'>
             <NavChats />
           </div>
         </div>

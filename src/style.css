@@ -16,3 +16,27 @@ body{
 .contentPage{
     margin-top: 6%;
 }
+
+
+@media (max-width: 1060px) {
+    .desktopStyle{
+       visibility: hidden;
+       width: 0%;
+    }
+
+    .mainDiv{
+        justify-content: center;
+    }
+
+    .content{
+        width: 100%;
+    }
+    
+  }
+  @media (min-width: 1061px) {
+    .mobileStyle{
+        visibility: hidden;
+    }
+    
+  }
+

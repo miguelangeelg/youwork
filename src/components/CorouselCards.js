@@ -49,7 +49,17 @@ const CorouselCards = () => {
     <div className="containerCarousel">
       <Swiper
         spaceBetween={3}
-        slidesPerView={3}
+        slidesPerView={1}
+        breakpoints={{
+          // when window width is >= 640px
+          1180: {
+            slidesPerView: 3
+          },
+          700: {
+            slidesPerView: 2
+          }
+        }}
+
         // onSlideChange={() => console.log('slide change')}
         // onSwiper={(swiper) => console.log(swiper)}
         style={{ width: "100%", height: 259 }}
