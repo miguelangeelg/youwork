@@ -69,11 +69,17 @@ const CorouselCardsPerson = () => {
     return (
         <div className="containerCarousel">
             <Swiper
-                className="swiperCardPerson"
                 spaceBetween={3}
-                slidesPerView={3}
-                // onSlideChange={() => console.log('slide change')}
-                // onSwiper={(swiper) => console.log(swiper)}
+                slidesPerView={1}
+                breakpoints={{
+                    // when window width is >= 640px
+                    1180: {
+                        slidesPerView: 3
+                    },
+                    700: {
+                        slidesPerView: 2
+                    }
+                }}
                 style={{ width: "100%" }}>
                 {
                     list.map((person, i) => {
@@ -119,7 +125,7 @@ const CorouselCardsPerson = () => {
 
                                             </div>
                                         </div>
-                                        <div className="row" style={{height:"43%"}}>
+                                        <div className="row" style={{ height: "43%" }}>
                                             <div className="col">
                                                 <div className="col">
                                                     <button>Ver Perfil</button>
