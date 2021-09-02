@@ -3,8 +3,9 @@ import './style/navTop.css';
 
 import userThree from '../assets/img/users/user3.png';
 
-const  NavTop = ()=> {
-        return (
+const NavTop = () => {
+    return (
+        <div className="containerNavbarTop">
             <nav className="navbar-expand-lg  p-2">
                 <div className="row">
                     <div className="col-2">
@@ -35,7 +36,9 @@ const  NavTop = ()=> {
                     </div>
                 </div>
             </nav>
-        )
+        </div>
+
+    )
 }
 
 export default NavTop;

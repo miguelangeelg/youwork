@@ -6,12 +6,25 @@ import NavTop from './components/NavTop'
 import { BrowserRouter as Router, Route } from 'react-router-dom'
 import './style.css'
 function App () {
+
+  const btnActive = () => {
+    let sidebar = document.querySelector(".sidebar");
+    sidebar.classList.toggle("active");
+    let colNav = document.querySelector(".colNav");
+
+    if (sidebar.className !== "sidebar active") {
+      colNav.className = "col-2 colNav";
+    } else {
+      colNav.className = "col-3 colNav";
+    }
+  }
+
   return (
     <Router>
       <div className='container-fluid'>
         <div className='row'>
-          <div className='col-2'>
-            <Nav />
+          <div className='col-3 colNav'>
+            <Nav btnActiveFunction = {btnActive} />
           </div>
           <div className='col-8 content'>
             <div className='row'>

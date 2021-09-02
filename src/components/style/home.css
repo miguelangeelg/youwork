@@ -1,8 +1,8 @@
 .Home {
-  position: relative;
+  /* position: relative; */
   text-align: center;
   width: 100%;
-  left: 10%;
+  /* left: 10%; */
   min-width: 40%;
 }
 
@@ -98,8 +98,8 @@
 }
 
 .corouseldiv {
-  position: relative;
-  left: 10%;
+  /* position: relative;
+  left: 10%; */
   width: 100%;
 }
 

@@ -4,14 +4,14 @@ import youWorkImg from '../assets/img/YourWork.png';
 // import userOne from '../assets/img/users/user1.jpeg';
 // import userTwo from '../assets/img/users/user2.jpeg';
 // import userThree from '../assets/img/users/user3.png';
-const Nav = () =>{
+const Nav = (props) =>{
         return (
             <div>
                 <div className="sidebar active">
                     <div className="logo-details">
                         {/* <i className='bx bxl-c-plus-plus icon'></i> */}
                         <div className="logo_name" onClick={goToHome} >You Work</div>
-                        <i className='bx bx-menu' id="btn" onClick={btnActive} ></i>
+                        <i className='bx bx-menu' id="btn" onClick={props.btnActiveFunction} ></i>
                     </div>
                     <ul className="nav-list">
                         <li className="liHome">
@@ -68,10 +68,7 @@ const Nav = () =>{
 
 }
 
-const btnActive = () => {
-    let sidebar = document.querySelector(".sidebar");
-    sidebar.classList.toggle("active");
-}
+
 
 const btnSearch = () => {
     let sidebar = document.querySelector(".sidebar");

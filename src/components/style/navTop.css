@@ -2,8 +2,8 @@
   background: #fefefe;
   border-radius: 12px;
   width: 64%;
-  position: relative;
-  left: 24%;
+  /* position: relative;
+  left: 24%; */
   position: fixed;
   z-index: 100;
 }

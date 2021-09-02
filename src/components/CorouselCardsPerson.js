@@ -16,7 +16,7 @@ import userSix from '../assets/img/users/user6.jpeg';
 
 const list = Object.entries({
     "Jualian Perez": {
-        "id" :"1",
+        "id": "1",
         "name": "Jualian Perez",
         "photo": userOne,
         "dedication": "Jardinero",
@@ -24,7 +24,7 @@ const list = Object.entries({
         "experience": 5
     },
     "Manuela Rodriguez": {
-        "id" :"2",
+        "id": "2",
         "name": "Manuela Rodriguez",
         "photo": userTwo,
         "dedication": "Enfermera",
@@ -32,7 +32,7 @@ const list = Object.entries({
         "experience": 3
     },
     "Vanessa Zapata": {
-        "id" :"3",
+        "id": "3",
         "name": "Vanessa Zapata",
         "photo": userThree,
         "dedication": "Aseadora",
@@ -40,7 +40,7 @@ const list = Object.entries({
         "experience": 0
     },
     "Juan Fernando Q": {
-        "id" :"4",
+        "id": "4",
         "name": "Juan Fernando Q",
         "photo": userFour,
         "dedication": "Mensajero",
@@ -48,7 +48,7 @@ const list = Object.entries({
         "experience": 4
     },
     "Mariano Falda": {
-        "id" :"5",
+        "id": "5",
         "name": "Mariano Falda",
         "photo": userFive,
         "dedication": "Desarrollador",
@@ -56,7 +56,7 @@ const list = Object.entries({
         "experience": 3
     },
     "Andres Zapata": {
-        "id" :"6",
+        "id": "6",
         "name": "Andres Zapata",
         "photo": userSix,
         "dedication": "Archivista",
@@ -65,72 +65,78 @@ const list = Object.entries({
     }
 })
 
-const CorouselCardsPerson = () =>{
-        return (
-            <div className="containerCarousel">
-                <Swiper
-                    className="swiperCardPerson"
-                    spaceBetween={3}
-                    slidesPerView={3}
-                    // onSlideChange={() => console.log('slide change')}
-                    // onSwiper={(swiper) => console.log(swiper)}
-                    style={{ width: "100%" }}>
-                    {
-                        list.map((person, i) => {
-                            return (
-                                <SwiperSlide className="betterPersons"  key={Math.random()} >
+const CorouselCardsPerson = () => {
+    return (
+        <div className="containerCarousel">
+            <Swiper
+                className="swiperCardPerson"
+                spaceBetween={3}
+                slidesPerView={3}
+                // onSlideChange={() => console.log('slide change')}
+                // onSwiper={(swiper) => console.log(swiper)}
+                style={{ width: "100%" }}>
+                {
+                    list.map((person, i) => {
+                        return (
+                            <SwiperSlide className="betterPersons" key={Math.random()} >
                                 <div className="cardbetterPerson">
-                                    <div className="titleJobCard" >
-                                        <p className="titleText">{person[1].name}</p>
-                                    </div>
-                                    <div className="bodyCardPerson">
-                                        <div className="cardContent">
-                                            <div className="row firstContent">
-                                                <div className="col">
-                                                    <img alt="some" src={person[1].photo} />
-                                                </div>
-                                                <div className="col">
-                                                    <div className="userinfo">
-                                                        <ul>
-                                                            <li>
-                                                                <b><span className="titleUser">Profeción:</span> {person[1].dedication}</b>
-                                                            </li>
-                                                            <li>
-                                                                <b><span className="titleUser">Edad:</span> {person[1].age} años</b>
-                                                            </li>
-                                                            <li>
-                                                                <b><span className="titleUser">Experiencia:</span> {person[1].experience} años</b>
-                                                            </li>
-                                                            <li>
-                                                                <p className="calitifationstring">Calificación:</p>
-                                                                <div className="ratingUser">
-                                                                    <i  className='bx bxs-star true'></i>
-                                                                    <i  className='bx bxs-star true'></i>
-                                                                    <i  className='bx bxs-star true'></i>
-                                                                    <i  className='bx bxs-star true'></i>
-                                                                    <i  className='bx bxs-star true'></i>
-                                                                </div>
-                                                            </li>
-                                                        </ul>
-                                                    </div>
+                                    <div className="grid">
+                                        <div className="row">
+                                            <div className="col">
+                                                <div className="titleJobCard" >
+                                                    <p className="titleText">{person[1].name}</p>
                                                 </div>
                                             </div>
-                                            <div className="row">
+                                        </div>
+                                        <div className="row">
+                                            <div className="col">
+                                                <img alt="some" src={person[1].photo} />
+                                            </div>
+                                            <div className="col">
+                                                <div className="userinfo">
+                                                    <ul>
+                                                        <li>
+                                                            <b><span className="titleUser">Profeción:</span> {person[1].dedication}</b>
+                                                        </li>
+                                                        <li>
+                                                            <b><span className="titleUser">Edad:</span> {person[1].age} años</b>
+                                                        </li>
+                                                        <li>
+                                                            <b><span className="titleUser">Experiencia:</span> {person[1].experience} años</b>
+                                                        </li>
+                                                        <li>
+                                                            <p className="calitifationstring">Calificación:</p>
+                                                            <div className="ratingUser">
+                                                                <i className='bx bxs-star true'></i>
+                                                                <i className='bx bxs-star true'></i>
+                                                                <i className='bx bxs-star true'></i>
+                                                                <i className='bx bxs-star true'></i>
+                                                                <i className='bx bxs-star true'></i>
+                                                            </div>
+                                                        </li>
+                                                    </ul>
+                                                </div>
+
+                                            </div>
+                                        </div>
+                                        <div className="row" style={{height:"43%"}}>
+                                            <div className="col">
                                                 <div className="col">
                                                     <button>Ver Perfil</button>
                                                 </div>
+
                                             </div>
                                         </div>
                                     </div>
                                 </div>
                             </SwiperSlide>
-                            )
-                        })
-                    }
-                </Swiper>
-            </div>
-        )
-    
+                        )
+                    })
+                }
+            </Swiper>
+        </div>
+    )
+
 
 }
 

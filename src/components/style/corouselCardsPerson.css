@@ -13,21 +13,19 @@
   width: 95%;
   height: 98%;
 }
-
+/* 
 @media (min-width: 1600px) {
   .swiperCardPerson {
     height: 280px;
   }
 }
 
-@media (max-width: 1424px) {
+@media (max-width: 1224px) {
   .swiperCardPerson {
-    height: 370px;
+    height: 390px;
   }
-  .cardbetterPerson button {
-    top: 87px;
-  }
-}
+  
+} */
 
 .containerCarousel {
   width: 100%;
@@ -46,13 +44,13 @@
   color: white;
 }
 
-.cardbetterPerson .bodyCardPerson {
+.cardbetterPerson .betterPersons {
   padding-top: 10px;
   margin: 10px;
 }
 
 .cardbetterPerson button {
-  position: relative;
+  /* position: relative; */
   background: #fefefe;
   color: #da2021;
   border-radius: 12px;
@@ -67,26 +65,26 @@
   transition: all 0.1s ease;
 }
 
-.bodyCardPerson .col img {
-  position: relative;
-  bottom: 15%;
+.betterPersons .col img {
+  /* position: relative;
+  bottom: 15%; */
   height: 140px;
   width: 140px;
   border-radius: 100%;
   margin-bottom: 5px;
 }
 
-.bodyCardPerson .col b {
+.betterPersons .col b {
   font-size: 13px;
   justify-content: left;
   font-weight: bolder;
 }
 
-.bodyCardPerson .cardContent {
+.betterPersons .cardContent {
   margin-top: 8px;
 }
 
-.bodyCardPerson .cardContent .firstContent {
+.betterPersons .cardContent .firstContent {
   height: 170px;
 }
 
@@ -94,24 +92,19 @@
   color: #da2021;
 }
 
-.bodyCardPerson .col li {
+.betterPersons .col li {
   justify-content: left;
   list-style-type: none;
   text-align: left;
 }
 
-.bodyCardPerson .userinfo {
-  position: relative;
-  bottom: 18%;
-}
-
-.bodyCardPerson .ratingUser .bxs-star.true {
+.betterPersons .ratingUser .bxs-star.true {
   color: rgb(255, 221, 31);
-  position: relative;
-  bottom: 20%;
+  /* position: relative;
+  bottom: 20%; */
 }
 
-.bodyCardPerson .ratingUser {
+.betterPersons .ratingUser {
   position: relative;
   bottom: 30%;
   margin-top: 0;
