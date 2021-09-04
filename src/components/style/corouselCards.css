@@ -16,6 +16,9 @@
 
 .containerCarousel {
   width: 100%;
+  padding: 0px;
+  padding-left: 0px !important;
+  padding-right: 0px !important;
 }
 
 .titleJobCard {
@@ -58,4 +61,11 @@
   background: #fefefe;
   color: #da2021;
   transition: all 0.1s ease;
+}
+
+
+@media (max-width: 1060px) {
+  .cardBetterJob{
+    width: 97.6%;
+  }
 }

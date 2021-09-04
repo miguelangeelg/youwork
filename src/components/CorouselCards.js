@@ -48,7 +48,7 @@ const CorouselCards = () => {
   return (
     <div className="containerCarousel">
       <Swiper
-        spaceBetween={3}
+        spaceBetween={4.2}
         slidesPerView={1}
         breakpoints={{
           // when window width is >= 640px
