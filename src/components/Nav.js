@@ -53,7 +53,7 @@ const Nav = (props) =>{
                         </li>
                         <li>
                             <a href="/#">
-                                <i className='bx bxs-hot'></i>
+                                <i className='bx bxs-hot navPlanPremium'></i>
                                 <span className="links_name">Planes Premium</span>
                             </a>
                             <span className="tooltip">Planes Premium</span>

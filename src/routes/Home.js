@@ -13,7 +13,7 @@ const Home = () => {
         return (
             <div className="p-2">
                 <div className="Home row">
-                    <div id="carouselExampleFade" className="carousel slide carousel-fade" data-bs-ride="carousel">
+                    <div id="carouselExampleFade" className="carousel slide carousel-fade desktopStyle" data-bs-ride="carousel">
                         <div className="carousel-inner">
                             <div className="carousel-item active">
                                 <img alt="some" src={carousel1} className="d-block w-100"   />

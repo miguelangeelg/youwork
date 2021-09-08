@@ -20,6 +20,7 @@ body{
 
 @media (max-width: 1060px) {
     .desktopStyle{
+       display: none;
        visibility: hidden;
        width: 0%;
     }

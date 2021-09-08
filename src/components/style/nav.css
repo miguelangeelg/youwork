@@ -190,6 +190,9 @@ ul {
   color: #ffffff;
 }
 
+
+
+
 .logo_name {
   color: #da2021;
   font-size: 25px;
@@ -237,4 +240,9 @@ li.liHome {
 
 .sidebar.active li.liHome {
   display: none;
+}
+
+
+.navPlanPremium{
+  color: #da2021 ;
 }
