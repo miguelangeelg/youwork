@@ -21,3 +21,7 @@
 .navMobile li:hover a{
     color: #da2021 !important;
 }
+
+.navMobile .container-fluid{
+    background: rgb(255, 255, 255);
+}
