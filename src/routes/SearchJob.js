@@ -2,15 +2,13 @@ import React from 'react';
 import '../components/style/searchJob.css';
 
 const SearchJob = () => {
-    render(){
         return(
-            <div className="searchJob">
-                <h1>Search Job</h1>
-            </div>
-
+          <div className="row">
+              <div className="col">
+                    <h1>Search Job</h1>
+              </div>
+          </div>
         )
-    }
-
 }
 
 export default SearchJob;

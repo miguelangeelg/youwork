@@ -1,7 +1,7 @@
 import Nav from './components/Nav'
 import NavChats from './components/NavChats'
 import Home from './routes/Home'
-// import SearchJob from './routes/SearchJob'
+import SearchJob from './routes/SearchJob'
 import NavTop from './components/NavTop'
 import NavMobile from './components/NavMobile'
 import { BrowserRouter as Router, Route } from 'react-router-dom'
@@ -40,6 +40,7 @@ function App() {
             <div className='row contentPage'>
               <div className='col'>
                 <Route path='/' exact component={Home} />
+                <Route path="/searchJob" component={SearchJob}/>
               </div>
             </div>
           </div>
@@ -48,7 +49,6 @@ function App() {
           </div>
         </div>
         {/* <Route path="/" exact component={Home}/>  */}
-        {/* <Route path="/searchJob" component={SearchJob}/> */}
       </div>
     </Router>
   )

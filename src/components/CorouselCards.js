@@ -6,44 +6,68 @@ import 'swiper/swiper.scss';
 import 'swiper/components/navigation/navigation.scss';
 import 'swiper/components/pagination/pagination.scss';
 import 'swiper/components/scrollbar/scrollbar.scss';
+import $ from 'jquery';
 
 SwiperCore.use([Navigation, Pagination, Scrollbar, A11y]);
 
 
+let jobs = Object.entries({
+  "1": {
+    "id": "1",
+    "title": "Zapatero Los Sabados",
+    "description": "Se busca zapatero para trabajar los sabados este mes de agosto...",
+    "postedDate": "publicado 2 dias atras"
+  },
+  "2": {
+    "id": "2",
+    "title": "Aseadora",
+    "description": "Busco una mujer para que me haga el aseo general en mi casa...",
+    "postedDate": "publicado 3 dias atras"
+  },
+  "3": {
+    "id": "3",
+    "title": "Desarrollador ayudante",
+    "description": "Necesito un desarrollador con conocimientos en node...",
+    "postedDate": "publicado 3 dias atras"
+  },
+  "4": {
+    "id": "4",
+    "title": "Conductor para este sabado",
+    "description": "Busco un conductor para ir a la piedra del peñon el saba...",
+    "postedDate": "publicado hoy"
+  },
+  "5": {
+    "id": "5",
+    "title": "Médico para revisión",
+    "description": "Necesito un médico para que me diagnostique...",
+    "postedDate": "publicado ayer"
+  }
+})
+
+const openModal = (e) => {
+  let job;
+  jobs.forEach(element => {
+    if (element[1].id === e) {
+      job = element[1];
+      return;
+    }
+  });
+
+  $('.titleJobCardModal').html(job.title);
+  $('.descriptionModalJob').html(job.description);
+
+}
+
 const CorouselCards = () => {
 
-  let jobs = Object.entries({
-    "0": {
-      "id": "1",
-      "title": "Zapatero Los Sabados",
-      "description": "Se busca zapatero para trabajar los sabados este mes de agosto...",
-      "postedDate": "publicado 2 dias atras"
-    },
-    "1": {
-      "id": "2",
-      "title": "Aseadora",
-      "description": "Busco una mujer para que me haga el aseo general en mi casa...",
-      "postedDate": "publicado 3 dias atras"
-    },
-    "2": {
-      "id": "3",
-      "title": "Desarrollador ayudante",
-      "description": "Necesito un desarrollador con conocimientos en node...",
-      "postedDate": "publicado 3 dias atras"
-    },
-    "3": {
-      "id": "4",
-      "title": "Conductor para este sabado",
-      "description": "Busco un conductor para ir a la piedra del peñon el saba...",
-      "postedDate": "publicado hoy"
-    },
-    "4": {
-      "id": "5",
-      "title": "Médico para revisión",
-      "description": "Necesito un médico para que me diagnostique...",
-      "postedDate": "publicado ayer"
-    }
-  })
+
+
+
+  // useEffect(() => {
+
+  // }, [])
+
+
 
   return (
     <div className="containerCarousel">
@@ -90,7 +114,7 @@ const CorouselCards = () => {
                     </div>
                     <div className="row" style={{ display: "flex", alignContent: "center", textAlign: "center", height: "24%" }}>
                       <div className="col">
-                        <button>Ver mas información</button>
+                        <button data-bs-toggle="modal" className="seeMoreInfoCardJob" onClick={() => { openModal(job[1].id) }} data-book-id={`${job[1].id}`} data-bs-target="#modalProfile">Ver mas información</button>
                       </div>
                     </div>
 

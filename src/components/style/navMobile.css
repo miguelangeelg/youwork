@@ -25,3 +25,24 @@
 .navMobile .container-fluid{
     background: rgb(255, 255, 255);
 }
+
+.navMobile li i {
+    height: 50px;
+    min-width: 50px;
+    border-radius: 12px;
+    text-align: center;
+    font-size: 22px;
+    position: relative;
+    top: 13px;
+    color: #a5a5a5;
+  }
+
+  .navMobile li a {
+        color: #757575;
+        align-items: center;
+        text-decoration: none;
+        transition: all 0.4s ease;
+        border-radius: 12px;
+      
+  }
+

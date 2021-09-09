@@ -61,8 +61,8 @@
 
 .cardbetterPerson button {
   /* position: relative; */
-  background: #fefefe;
-  color: #da2021;
+  background: #da2021;
+  color: #fefefe;
   border-radius: 12px;
   border-color: transparent;
   box-shadow: 0 5px 10px rgba(0, 0, 0, 0.3);
@@ -70,8 +70,8 @@
 }
 
 .cardbetterPerson button:hover {
-  background: #da2021;
-  color: #fefefe;
+  background: #fefefe;
+  color: #da2021;
   transition: all 0.1s ease;
 }
 

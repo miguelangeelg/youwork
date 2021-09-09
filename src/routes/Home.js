@@ -7,11 +7,12 @@ import carousel4 from '../assets/img/home/carousel4.png'
 import CorouselCards from '../components/CorouselCards';
 import JobList from '../components/JobList';
 import CorouselCardsPerson from '../components/CorouselCardsPerson';
-
+import ProfileModal from '../components/ProfileModal';
 
 const Home = () => {
         return (
             <div className="p-2">
+                <ProfileModal/>
                 <div className="Home row">
                     <div id="carouselExampleFade" className="carousel slide carousel-fade desktopStyle" data-bs-ride="carousel">
                         <div className="carousel-inner">
@@ -71,5 +72,7 @@ const Home = () => {
         )
 
 }
+
+
 
 export default Home;

@@ -18,7 +18,16 @@ const NavMobile = () => {
                                 <a className="nav-link active" aria-current="page" href="/#">Inicio</a>
                             </li>
                             <li className="nav-item">
-                                <a className="nav-link" href="/#">Buscar Empleo</a>
+                                <a className="nav-link" href="/#">Mensajes</a>
+                            </li>
+                            <li className="nav-item">
+                                <a className="nav-link" href="/#">Notificaciones</a>
+                            </li>
+                            <li className="nav-item">
+
+                                <a className="nav-link" href="/searchJob">Buscar Empleo</a>
+
+
                             </li>
                             <li className="nav-item">
                                 <a className="nav-link" href="/#">Publicar Empleo</a>
