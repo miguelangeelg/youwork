@@ -19,7 +19,7 @@ const ProfileModal = () => {
                         </div>
                         <div className="modal-footer">
                             <button type="button" className="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
-                            <button type="button" style={{background:"#da2021", borderColor:"#da2021"}} className="btn btn-primary ">Aplicar a este trabajo</button>
+                            <button type="button" style={{background:"#007dc0", borderColor:"#007dc0"}} className="btn btn-primary ">Aplicar a este trabajo</button>
                         </div>
                     </div>
                 </div>

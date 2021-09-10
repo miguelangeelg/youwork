@@ -1,5 +1,5 @@
 .titleMobile{
-    color: #da2021 !important;
+    color: #007dc0 !important;
     font-size: 30px;
 }
 
@@ -9,17 +9,17 @@
 }
 
 .form-control:focus {
-        border-color: #da2021 !important;
+        border-color: #007dc0 !important;
     outline: 0 !important; 
     box-shadow: none !important;
 }
 
 .btnSearchMobile{
-    color: #da2021;
+    color: #007dc0;
 }
 
 .navMobile li:hover a{
-    color: #da2021 !important;
+    color: #007dc0 !important;
 }
 
 .navMobile .container-fluid{

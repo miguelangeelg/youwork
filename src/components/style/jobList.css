@@ -7,13 +7,13 @@
 }
 
 .listCard .iconCardList{
-    background: #da2021;
+    background: #007dc0;
     height: 100%;
     border-radius: 12px 0px 0 12px;
 }
 
 .listCard .buttonLookJob{
-    background: #da2021;
+    background: #007dc0;
     color: white;
     border-width: 0px;
     box-shadow: 0 5px 10px rgba(180, 180, 180, 0.3);
@@ -25,7 +25,7 @@
 
 .listCard .buttonLookJob:hover{
     background: white;
-    color: #da2021;
+    color: #007dc0;
     transition: all 0.5s ease;
 }
 

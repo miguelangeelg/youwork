@@ -52,7 +52,7 @@
 }
 
 .sidebar2 #btn:hover {
-  color: #da2021;
+  color: #007dc0;
   transition: all 0.4s ease;
   font-size: 35px;
 }
@@ -87,7 +87,7 @@
   background: #f7f7ff;
   padding-left: 50px;
   font-size: 18px;
-  color: #da2021;
+  color: #007dc0;
 }
 
 .sidebar2.active input {
@@ -157,7 +157,7 @@ ul {
 }
 
 .sidebar2 li a .bxs-plus-circle {
-  color: #da2021;
+  color: #007dc0;
   font-size: 28px;
 }
 
@@ -169,7 +169,7 @@ ul {
 }
 
 /* .sidebar2 li a:hover{
-    background: #DA2021;
+    background: #007dc0;
     color: #ffffff;
 } */
 
@@ -202,7 +202,7 @@ ul {
 }
 
 .logo_name {
-  color: #da2021;
+  color: #007dc0;
   font-size: 25px;
   font-weight: 400;
   position: relative;

@@ -44,7 +44,7 @@
 .titleJobCard {
   border-radius: unset;
   position: relative;
-  background: #da2021;
+  background: #007dc0;
   height: auto;
 }
 
@@ -61,7 +61,7 @@
 
 .cardbetterPerson button {
   /* position: relative; */
-  background: #da2021;
+  background: #007dc0;
   color: #fefefe;
   border-radius: 12px;
   border-color: transparent;
@@ -71,7 +71,7 @@
 
 .cardbetterPerson button:hover {
   background: #fefefe;
-  color: #da2021;
+  color: #007dc0;
   transition: all 0.1s ease;
 }
 
@@ -99,7 +99,7 @@
 }
 
 .titleUser {
-  color: #da2021;
+  color: #007dc0;
 }
 
 .betterPersons .col li {
@@ -122,6 +122,6 @@
 
 .calitifationstring {
   font-size: 13px;
-  color: #da2021;
+  color: #007dc0;
   margin-top: 2px;
 }
