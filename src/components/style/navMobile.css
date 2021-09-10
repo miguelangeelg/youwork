@@ -4,7 +4,7 @@
 }
 
 .inputSearchJobMobile{
-    border-radius: 12px;
+    border-radius: 6px;
       
 }
 
@@ -15,7 +15,15 @@
 }
 
 .btnSearchMobile{
+    border-radius: 6px;
     color: #007dc0;
+    border-color: #007dc0;
+}
+
+.btnSearchMobile:hover{
+    color: #ffffff;
+    background: #007dc0;
+    border-color: #007dc0;
 }
 
 .navMobile li:hover a{
@@ -29,7 +37,7 @@
 .navMobile li i {
     height: 50px;
     min-width: 50px;
-    border-radius: 12px;
+    border-radius: 6px;
     text-align: center;
     font-size: 22px;
     position: relative;
@@ -42,7 +50,7 @@
         align-items: center;
         text-decoration: none;
         transition: all 0.4s ease;
-        border-radius: 12px;
+        border-radius: 6px;
       
   }
 

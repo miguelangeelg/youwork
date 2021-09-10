@@ -7,7 +7,7 @@
 }
 
 .carousel-inner {
-  border-radius: 12px;
+  border-radius: 6px;
 }
 
 .cardsCarousel {
@@ -31,7 +31,7 @@
   background: #661032;
   min-height: 400px;
   height: auto;
-  border-radius: 10px;
+  border-radius: 6px;
 }
 
 .carousel-team-card-cell * {
@@ -103,6 +103,7 @@
   width: 100%;
   padding-right: 0px !important;
   padding-left: 0px !important;
+  margin: 0px;
 }
 
 .titleBetterJobs h4 {
@@ -123,4 +124,9 @@ h4 .bxs-star {
 
 #carouselExampleFade{
   z-index: 0;
+}
+
+
+.contentHomeAbsolute{
+  padding-left: 0px !important;
 }

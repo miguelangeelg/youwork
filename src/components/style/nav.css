@@ -7,7 +7,7 @@
   padding: 6px 14px;
   background: #fefefe;
   border-right: thick solid #b9b9b9;
-  border-radius: 12px;
+  border-radius: 6px;
   border-width: 1px;
   transition: all 0.5s ease;
 }
@@ -76,7 +76,7 @@
   width: 100%;
   left: 0;
   top: 0;
-  border-radius: 12px;
+  border-radius: 6px;
   outline: none;
   border: none;
   background: #fefefe;
@@ -87,7 +87,7 @@
 .sidebar.active input {
   padding: 0 20px 0 50px;
   width: 100%;
-  border-radius: 12px;
+  border-radius: 6px;
   outline: none;
   border: 1px solid;
   border-color: #757575 !important;
@@ -147,7 +147,7 @@ ul {
   align-items: center;
   text-decoration: none;
   transition: all 0.4s ease;
-  border-radius: 12px;
+  border-radius: 6px;
 }
 
 .sidebar li a:hover {
@@ -159,7 +159,7 @@ ul {
 .sidebar li i {
   height: 50px;
   min-width: 50px;
-  border-radius: 12px;
+  border-radius: 6px;
   text-align: center;
   font-size: 22px;
   position: relative;
@@ -214,9 +214,9 @@ i {
 }
 
 .sidebar .youWorkImg {
-  border-radius: 30%;
-  height: 35px;
-  width: 35px;
+  border-radius: 6px;
+  height: 30px;
+  width: 30px;
   transition: 0.5s;
   text-align: center;
   align-items: center;

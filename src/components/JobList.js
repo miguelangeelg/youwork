@@ -61,10 +61,10 @@ const JobList = () => {
                                             <div className="row">
                                                 <div className="col-9">
                                                     <div className="jobDescriptionList">
-                                                        <div> <span style={{ "color": "#0c6494" }}>Descripción: </span> {job.description} </div>
-                                                        <div> <span style={{ "color": "#0c6494" }}>Salario: </span> Acordado  </div>
-                                                        <div> <span style={{ "color": "#0c6494" }}>Publicador: </span> <a href="/#" style={{ color: "#0c6494" }}>{job.by}</a> </div>
-                                                        <div> <span style={{ "color": "#0c6494" }}>Fecha de publicación: </span> 2 dias atras. </div>
+                                                        <div> <span style={{ "color": "#007dc0" }}>Descripción: </span> {job.description} </div>
+                                                        <div> <span style={{ "color": "#007dc0" }}>Salario: </span> Acordado  </div>
+                                                        <div> <span style={{ "color": "#007dc0" }}>Publicador: </span> <a href="/#" style={{ color: "#007dc0" }}>{job.by}</a> </div>
+                                                        <div> <span style={{ "color": "#007dc0" }}>Fecha de publicación: </span> 2 dias atras. </div>
                                                     </div>
                                                 </div>
                                                 <div className="col-3" style={{display:"flex", alignItems:"center", justifyContent:"center"}}>

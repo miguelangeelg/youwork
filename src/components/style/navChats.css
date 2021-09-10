@@ -81,7 +81,7 @@
   width: 100%;
   left: 0;
   top: 0;
-  border-radius: 12px;
+  border-radius: 6px;
   outline: none;
   border: none;
   background: #f7f7ff;
@@ -93,7 +93,7 @@
 .sidebar2.active input {
   padding: 0 20px 0 50px;
   width: 100%;
-  border-radius: 12px;
+  border-radius: 6px;
   outline: none;
   border: 1px solid;
   border-color: #757575 !important;
@@ -176,7 +176,7 @@ ul {
 .sidebar2 li i {
   height: 50px;
   min-width: 50px;
-  border-radius: 12px;
+  border-radius: 6px;
   text-align: center;
   font-size: 22px;
 }
@@ -220,17 +220,6 @@ i {
   top: 10px;
 }
 
-.sidebar2 .youWorkImg {
-  border-radius: 100%;
-  height: 30px;
-  width: 30px;
-  transition: 0.5s;
-  text-align: center;
-  align-items: center;
-  align-content: center;
-  transition: all 0.5s ease;
-}
-
 li.liHome {
   align-content: center;
   text-align: center;
@@ -240,9 +229,6 @@ li.liHome {
   padding-bottom: 50px;
 }
 
-.sidebar2.active .youWorkImg {
-  display: none;
-}
 
 .sidebar2.active li.liHome {
   display: none;

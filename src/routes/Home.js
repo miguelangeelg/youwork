@@ -11,7 +11,7 @@ import ProfileModal from '../components/ProfileModal';
 
 const Home = () => {
         return (
-            <div className="p-2">
+            <div className="p-2 contentHomeAbsolute">
                 <ProfileModal/>
                 <div className="Home row">
                     <div id="carouselExampleFade" className="carousel slide carousel-fade desktopStyle" data-bs-ride="carousel">

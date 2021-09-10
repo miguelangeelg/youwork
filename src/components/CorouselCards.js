@@ -60,14 +60,8 @@ const openModal = (e) => {
 
 const CorouselCards = () => {
 
-
-
-
   // useEffect(() => {
-
   // }, [])
-
-
 
   return (
     <div className="containerCarousel">

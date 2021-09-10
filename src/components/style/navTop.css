@@ -1,6 +1,6 @@
 .navbar-expand-lg.p-2 {
   background: #fefefe;
-  border-radius: 12px;
+  border-radius: 6px;
   width: 64%;
   /* position: relative;
   left: 24%; */
@@ -9,7 +9,7 @@
 }
 
 #inputSearchNavbar {
-  border-radius: 12px;
+  border-radius: 6px;
   outline: none !important;
   border: 1px solid;
   border-color: #757575 !important;
