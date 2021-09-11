@@ -65,7 +65,27 @@ const list = Object.entries({
     }
 })
 
-const CorouselCardsPerson = () => {
+const CorouselCardsPerson = (props) => {
+
+    const  {userSelected, modalType} = props;
+  
+    // useEffect(() => {
+      
+      // }, [])
+      
+    const openModal = (e) => {
+      modalType("user");
+      let user;
+      list.forEach(element => {
+        if (element[1].id === e) {
+          user = element[1];
+          user.title = user.name;
+          return;
+        }
+      });
+      userSelected(user);
+    }
+
     return (
         <div className="containerCarousel">
             <Swiper
@@ -128,7 +148,7 @@ const CorouselCardsPerson = () => {
                                         <div className="row" style={{ height: "43%" }}>
                                             <div className="col">
                                                 <div className="col">
-                                                    <button>Ver Perfil</button>
+                                                    <button onClick={() => { openModal(person[1].id) }} data-bs-toggle="modal" data-bs-target="#exampleModalCenter">Ver Perfil</button>
                                                 </div>
 
                                             </div>

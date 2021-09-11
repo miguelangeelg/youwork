@@ -1,0 +1,25 @@
+.goThereModal{
+    background: white;
+    border-color: #007dc0;
+    color: #007dc0;
+    border-radius: 6px;
+}
+
+.goThereModal:hover{
+    background: #007dc0;
+    color: white;
+}
+
+
+.closeModalButton{
+    background: white;
+    border-color: #727272;
+    color: #727272;
+    border-radius: 6px;
+}
+
+.closeModalButton:hover{
+    background: #727272;
+    color: white;
+}
+

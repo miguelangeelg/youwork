@@ -6,7 +6,7 @@ import 'swiper/swiper.scss';
 import 'swiper/components/navigation/navigation.scss';
 import 'swiper/components/pagination/pagination.scss';
 import 'swiper/components/scrollbar/scrollbar.scss';
-import $ from 'jquery';
+// import $ from 'jquery';
 
 SwiperCore.use([Navigation, Pagination, Scrollbar, A11y]);
 
@@ -44,24 +44,26 @@ let jobs = Object.entries({
   }
 })
 
-const openModal = (e) => {
-  let job;
-  jobs.forEach(element => {
-    if (element[1].id === e) {
-      job = element[1];
-      return;
-    }
-  });
 
-  $('.titleJobCardModal').html(job.title);
-  $('.descriptionModalJob').html(job.description);
+const CorouselCards = (props) => {
 
-}
-
-const CorouselCards = () => {
-
+  const  {jobSelected, modalType} = props;
+  
   // useEffect(() => {
-  // }, [])
+    
+    // }, [])
+    
+  const openModal = (e) => {
+    modalType("job");
+    let job;
+    jobs.forEach(element => {
+      if (element[1].id === e) {
+        job = element[1];
+        return;
+      }
+    });
+    jobSelected(job);
+  }
 
   return (
     <div className="containerCarousel">
@@ -108,7 +110,7 @@ const CorouselCards = () => {
                     </div>
                     <div className="row" style={{ display: "flex", alignContent: "center", textAlign: "center", height: "24%" }}>
                       <div className="col">
-                        <button data-bs-toggle="modal" className="seeMoreInfoCardJob" onClick={() => { openModal(job[1].id) }} data-book-id={`${job[1].id}`} data-bs-target="#modalProfile">Ver mas información</button>
+                        <button className="seeMoreInfoCardJob" onClick={() => { openModal(job[1].id) }} data-bs-toggle="modal" data-bs-target="#exampleModalCenter" >Ver mas información</button>
                       </div>
                     </div>
 

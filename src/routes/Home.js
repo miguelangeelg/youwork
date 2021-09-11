@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import '../components/style/home.css';
 import carousel1 from '../assets/img/home/carousel1.png'
 import carousel2 from '../assets/img/home/carousel2.png'
@@ -7,72 +7,84 @@ import carousel4 from '../assets/img/home/carousel4.png'
 import CorouselCards from '../components/CorouselCards';
 import JobList from '../components/JobList';
 import CorouselCardsPerson from '../components/CorouselCardsPerson';
-import ProfileModal from '../components/ProfileModal';
-
+import Modal from '../components/Modal';
+// import $ from 'jquery';
 const Home = () => {
-        return (
-            <div className="p-2 contentHomeAbsolute">
-                <ProfileModal/>
-                <div className="Home row">
-                    <div id="carouselExampleFade" className="carousel slide carousel-fade desktopStyle" data-bs-ride="carousel">
-                        <div className="carousel-inner">
-                            <div className="carousel-item active">
-                                <img alt="some" src={carousel1} className="d-block w-100"   />
-                            </div>
-                            <div className="carousel-item">
-                                <img alt="some" src={carousel2} className="d-block w-100"   />
-                            </div>
-                            <div className="carousel-item">
-                                <img alt="some" src={carousel3} className="d-block w-100"   />
-                            </div>
-                            <div className="carousel-item">
-                                <img alt="some" src={carousel4} className="d-block w-100"   />
-                            </div>
+    const [infoModal, setInfoModal] = useState("");
+    const [modalType, setModalType] = useState("")
+
+
+    return (
+        <div className="p-2 contentHomeAbsolute">
+            {
+                infoModal ? (
+                    <Modal title={infoModal.title} modalType={modalType}>
+                        Esta informacion dependera si es para ver un usuario o un trabajo. :)
+                        From Miguel Angel G 🇨🇴
+                        To Whole World 🌎
+                    </Modal>
+                ) : (
+                    <Modal>
+
+                    </Modal>
+                )
+            }
+            <div className="Home row">
+                <div id="carouselExampleFade" className="carousel slide carousel-fade desktopStyle" data-bs-ride="carousel">
+                    <div className="carousel-inner">
+                        <div className="carousel-item active">
+                            <img alt="some" src={carousel1} className="d-block w-100" />
                         </div>
-                        <button className="carousel-control-prev" type="button" data-bs-target="#carouselExampleFade" data-bs-slide="prev">
-                            <span className="carousel-control-prev-icon" aria-hidden="true"></span>
-                            <span className="visually-hidden">Previous</span>
-                        </button>
-                        <button className="carousel-control-next" type="button" data-bs-target="#carouselExampleFade" data-bs-slide="next">
-                            <span className="carousel-control-next-icon" aria-hidden="true"></span>
-                            <span className="visually-hidden">Next</span>
-                        </button>
+                        <div className="carousel-item">
+                            <img alt="some" src={carousel2} className="d-block w-100" />
+                        </div>
+                        <div className="carousel-item">
+                            <img alt="some" src={carousel3} className="d-block w-100" />
+                        </div>
+                        <div className="carousel-item">
+                            <img alt="some" src={carousel4} className="d-block w-100" />
+                        </div>
                     </div>
-                </div>
-                <div className="corouseldiv row p-3">
-                    <div className="titleBetterJobs ">
-                        <h4 className="d-flex justify-content-start">Trabajos recomendados
-                            <i  className='bx bxs-star'></i>
-                        </h4> <small>Deliza hacia la izquierda para ver mas... </small>
-                        <hr />
-                    </div>
-                    <CorouselCards />
-                </div>
-                <div className="corouseldiv row p-3">
-                    <div className="titleBetterJobs ">
-                        <h4 className="d-flex justify-content-start">Personas recomendadas
-                            <i className='bx bxs-star'></i>
-                        </h4>
-                        <small>Deliza hacia la izquierda para ver mas... </small>
-                        <hr />
-                    </div>
-                    <CorouselCardsPerson />
-                </div>
-                <div className="corouseldiv row p-3">
-                    <div className="titleBetterJobs ">
-                        <h4 className="d-flex justify-content-start">Mas trabajos...
-                            <i  className='bx bxs-star'></i>
-                        </h4>
-                        <hr />
-                    </div>
-                    <JobList />
+                    <button className="carousel-control-prev" type="button" data-bs-target="#carouselExampleFade" data-bs-slide="prev">
+                        <span className="carousel-control-prev-icon" aria-hidden="true"></span>
+                        <span className="visually-hidden">Previous</span>
+                    </button>
+                    <button className="carousel-control-next" type="button" data-bs-target="#carouselExampleFade" data-bs-slide="next">
+                        <span className="carousel-control-next-icon" aria-hidden="true"></span>
+                        <span className="visually-hidden">Next</span>
+                    </button>
                 </div>
             </div>
-
-        )
-
+            <div className="corouseldiv row p-3">
+                <div className="titleBetterJobs ">
+                    <h4 className="d-flex justify-content-start">Trabajos recomendados
+                        <i className='bx bxs-star'></i>
+                    </h4> <small>Deliza hacia la izquierda para ver mas... </small>
+                    <hr />
+                </div>
+                <CorouselCards jobSelected={setInfoModal} modalType={setModalType} />
+            </div>
+            <div className="corouseldiv row p-3">
+                <div className="titleBetterJobs ">
+                    <h4 className="d-flex justify-content-start">Personas recomendadas
+                        <i className='bx bxs-star'></i>
+                    </h4>
+                    <small>Deliza hacia la izquierda para ver mas... </small>
+                    <hr />
+                </div>
+                <CorouselCardsPerson userSelected={setInfoModal} modalType={setModalType} />
+            </div>
+            <div className="corouseldiv row p-3">
+                <div className="titleBetterJobs ">
+                    <h4 className="d-flex justify-content-start">Mas trabajos...
+                        <i className='bx bxs-star'></i>
+                    </h4>
+                    <hr />
+                </div>
+                <JobList />
+            </div>
+        </div>
+    )
 }
-
-
 
 export default Home;
