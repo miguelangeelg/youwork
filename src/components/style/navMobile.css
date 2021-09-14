@@ -5,7 +5,13 @@
 
 .inputSearchJobMobile{
     border-radius: 6px;
+    width: 50%;
+    margin-right: 10px !important;
       
+}
+
+#pr_id_2{
+    display:  initial !important;
 }
 
 .form-control:focus {
@@ -18,6 +24,8 @@
     border-radius: 6px;
     color: #007dc0;
     border-color: #007dc0;
+    position: relative;
+    bottom: 3px;
 }
 
 .btnSearchMobile:hover{

@@ -1,8 +1,36 @@
-import React from 'react';
+import React, {useState} from 'react';
+import { AutoComplete } from 'primereact/autocomplete';
 import './style/navMobile.css';
 
 
 const NavMobile = () => {
+
+    const [filteredJobs, setFilteredJobs] = useState(null);
+    const [selectedJob1, setSelectedJob1] = useState(null);
+
+
+    const jobs = [
+        {"name":"Aseadora"}, {"name":"Desarrollador"}, {"name":"Conductor"}, {"name":"Archivista"}
+    ];
+
+    const searchJob = (event) => {
+
+     
+        setTimeout(() => {
+            let _filteredJobs;
+            if (!event.query.trim().length) {
+                _filteredJobs = [...jobs];
+            }
+            else {
+                _filteredJobs = jobs.filter((jobI) => {
+                    return jobI.name.toLowerCase().startsWith(event.query.toLowerCase());
+                });
+            }
+
+            setFilteredJobs(_filteredJobs);
+        }, 250);
+    }
+
 
     return (
         <div className="navMobile">
@@ -57,8 +85,16 @@ const NavMobile = () => {
                                 <a className="nav-link disabled" href="/#" tabIndex="-1" aria-disabled="true">Disabled</a>
                             </li> */}
                         </ul>
-                        <form className="d-flex">
-                            <input className="form-control me-2 inputSearchJobMobile" type="search" placeholder="Buscar Trabajo" aria-label="Search" />
+                        <form className="">
+                            <AutoComplete
+                            inputClassName="inputSearchJobMobile"
+                            value={selectedJob1}
+                            suggestions={filteredJobs}
+                            completeMethod={searchJob}
+                            field="name"
+                            placeholder="Buscar Trabajo"
+                            onChange={(e) => setSelectedJob1(e.value)}
+                            />
                             <button className="btn btn-outline-danger btnSearchMobile" type="submit">Buscar</button>
                         </form>
                     </div>

@@ -18,11 +18,11 @@ const Nav = (props) =>{
                             <img  className="youWorkImg" src={youWorkImg} alt="some" />
                             <span className="tooltip">You Work Inicio</span>
                         </li>
-                        <li>
+                        {/* <li>
                             <i className='bx bx-search firsticon' onClick={btnSearch} ></i>
                             <input type="text" placeholder="Buscar..." />
                             <span className="tooltip">Buscar</span>
-                        </li>
+                        </li> */}
                         <li>
                             <a href="/searchJob">
                                 <i className='bx bx-world'></i>
@@ -70,10 +70,10 @@ const Nav = (props) =>{
 
 
 
-const btnSearch = () => {
-    let sidebar = document.querySelector(".sidebar");
-    sidebar.classList.toggle("active");
-}
+// const btnSearch = () => {
+//     let sidebar = document.querySelector(".sidebar");
+//     sidebar.classList.toggle("active");
+// }
 
 const goToHome = () => {
     window.location.href = "/#";
