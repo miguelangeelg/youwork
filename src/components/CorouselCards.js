@@ -16,29 +16,54 @@ let jobs = Object.entries({
     "id": "1",
     "title": "Zapatero Los Sabados",
     "description": "Se busca zapatero para trabajar los sabados este mes de agosto...",
+    "date": "04/10/2021",
+    "salary": "45.000",
+    "location": "Medellín, Antioquia",
+    "employer":"Manuel Medrano",
+    "employerScore": "4.5",
     "postedDate": "publicado 2 dias atras"
   },
   "2": {
     "id": "2",
     "title": "Aseadora",
     "description": "Busco una mujer para que me haga el aseo general en mi casa...",
+    "date": "26/10/2021",
+    "salary": "35.000",
+    "location": "Medellín, Antioquia",
+    "employer":"Jaime Rodriguez",
+    "employerScore": "4.9",
     "postedDate": "publicado 3 dias atras"
   },
   "3": {
     "id": "3",
     "title": "Desarrollador ayudante",
+    "date": "29/11/2021",
+    "salary": "50.000",
+    "location": "Bello, Antioquia",
+    "employer":"Miguel Zapata",
+    "employerScore": "5.0",
     "description": "Necesito un desarrollador con conocimientos en node...",
     "postedDate": "publicado 3 dias atras"
   },
   "4": {
     "id": "4",
     "title": "Conductor para este sabado",
+    "date": "23/12/2021",
+    "salary": "240.000",
+    "location": "Medellín, Antioquia",
+    "employer":"Wilson Canabrea",
+    "employerScore": "3.9",
     "description": "Busco un conductor para ir a la piedra del peñon el saba...",
     "postedDate": "publicado hoy"
   },
   "5": {
     "id": "5",
     "title": "Médico para revisión",
+    "date": "16/09/2021",
+    "salary": "23.000",
+    "location": "Medellín, Antioquia",
+    "employer":"Santiago Orrego",
+    "employerScore": "4.5",
     "description": "Necesito un médico para que me diagnostique...",
     "postedDate": "publicado ayer"
   }

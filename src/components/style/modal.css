@@ -1,14 +1,14 @@
 .goThereModal{
-    background: white;
-    border-color: #007dc0;
-    color: #007dc0;
+    background: #007dc0;
+    border-color: white;
+    color: white;
     border-radius: 6px;
 }
 
-.goThereModal:hover{
-    background: #007dc0;
-    color: white;
-}
+/* .goThereModal:hover{
+    background: white;
+    color: #007dc0;
+} */
 
 
 .closeModalButton{
@@ -23,3 +23,39 @@
     color: white;
 }
 
+.modal-content{
+    border-color: #007dc0 !important;
+}
+
+.modal-header{
+    border-bottom: 1px solid #007dc0 !important;
+}
+
+.descriptionModalJob{
+   text-align: justify;
+}
+
+.descriptionJobTitle{
+    color: #007dc0;
+    font-weight: bold;
+    margin-bottom: 1px;
+    margin-top: 1px;
+}
+
+.btnSeeEmployerProfileM{
+    border-radius: 6px;
+    border-color: #007dc0;
+    background: white;
+    color: #007dc0;
+    width: 100px;
+    height: 27px;
+    margin-left: 10px;
+    padding-top: 0px;
+    padding-bottom: 0px;
+}
+
+.btnSeeEmployerProfileM:hover{
+    color: white;
+    background: #007dc0;
+
+}

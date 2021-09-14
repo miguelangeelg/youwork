@@ -8,6 +8,7 @@ import CorouselCards from '../components/CorouselCards';
 import JobList from '../components/JobList';
 import CorouselCardsPerson from '../components/CorouselCardsPerson';
 import Modal from '../components/Modal';
+import ModalContent from '../components/ModalContent';
 // import $ from 'jquery';
 const Home = () => {
     const [infoModal, setInfoModal] = useState("");
@@ -19,9 +20,7 @@ const Home = () => {
             {
                 infoModal ? (
                     <Modal title={infoModal.title} modalType={modalType}>
-                        Esta informacion dependera si es para ver un usuario o un trabajo. :)
-                        From Miguel Angel G 🇨🇴
-                        To Whole World 🌎
+                        <ModalContent type={modalType} data={infoModal} />
                     </Modal>
                 ) : (
                     <Modal>
