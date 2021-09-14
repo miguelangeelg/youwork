@@ -5,6 +5,9 @@ import SearchJob from './routes/SearchJob'
 import NavTop from './components/NavTop'
 import NavMobile from './components/NavMobile'
 import { BrowserRouter as Router, Route } from 'react-router-dom'
+import 'primereact/resources/themes/saga-blue/theme.css'
+import 'primereact/resources/primereact.min.css'
+import 'primeicons/primeicons.css'
 import './style.css'
 function App() {
 
