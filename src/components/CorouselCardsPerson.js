@@ -11,6 +11,8 @@ import userThree from '../assets/img/users/user3.png';
 import userFour from '../assets/img/users/user4.jpeg';
 import userFive from '../assets/img/users/user5.jpeg';
 import userSix from '../assets/img/users/user6.jpeg';
+
+
 // import userSeven from '../assets/img/users/user7.jpeg';
 // import userEight from '../assets/img/users/user8.jpeg';
 
@@ -19,8 +21,8 @@ const list = Object.entries({
         "id": "1",
         "name": "Jualian Perez",
         "photo": userOne,
-        "dedication": "Jardinero",
-        "age": 25,
+        "dedication": "Jardinero, +5 mas",
+        "age": 39,
         "experience": 5
     },
     "Manuela Rodriguez": {
@@ -67,23 +69,23 @@ const list = Object.entries({
 
 const CorouselCardsPerson = (props) => {
 
-    const  {userSelected, modalType} = props;
-  
+    const { userSelected, modalType } = props;
+
     // useEffect(() => {
-      
-      // }, [])
-      
+
+    // }, [])
+
     const openModal = (e) => {
-      modalType("user");
-      let user;
-      list.forEach(element => {
-        if (element[1].id === e) {
-          user = element[1];
-          user.title = user.name;
-          return;
-        }
-      });
-      userSelected(user);
+        modalType("user");
+        let user;
+        list.forEach(element => {
+            if (element[1].id === e) {
+                user = element[1];
+                user.title = user.name;
+                return;
+            }
+        });
+        userSelected(user);
     }
 
     return (
@@ -100,7 +102,7 @@ const CorouselCardsPerson = (props) => {
                         slidesPerView: 2
                     }
                 }}
-                style={{ width: "100%", height:"285px" }}>
+                style={{ width: "100%", height: "400px" }}>
                 {
                     list.map((person, i) => {
                         return (
@@ -118,32 +120,28 @@ const CorouselCardsPerson = (props) => {
                                             <div className="col">
                                                 <img alt="some" src={person[1].photo} />
                                             </div>
+                                        </div>
+                                        <div className="row row-infoBetterPerson">
                                             <div className="col">
                                                 <div className="userinfo">
                                                     <ul>
                                                         <li>
-                                                            <b><span className="titleUser">Profeción:</span> {person[1].dedication}</b>
+                                                            <b><span className="titleUser">Profeción:</span>  {" "+person[1].dedication}</b>
                                                         </li>
                                                         <li>
-                                                            <b><span className="titleUser">Edad:</span> {person[1].age} años</b>
+                                                            <b><span className="titleUser">Edad:</span>  {" "+person[1].age} años</b>
                                                         </li>
                                                         <li>
-                                                            <b><span className="titleUser">Experiencia:</span> {person[1].experience} años</b>
+                                                            <b><span className="titleUser">Experiencia:</span>  {" "+person[1].experience} años</b>
                                                         </li>
-                                                        <li>
-                                                            <p className="calitifationstring">Calificación:</p>
-                                                            <div className="ratingUser">
-                                                                <i className='bx bxs-star true'></i>
-                                                                <i className='bx bxs-star true'></i>
-                                                                <i className='bx bxs-star true'></i>
-                                                                <i className='bx bxs-star true'></i>
-                                                                <i className='bx bxs-star true'></i>
-                                                            </div>
+                                                        <li >
+                                                            <b><span className="calitifationstring titleUser">Calificación: </span>  <span> 4.3</span></b>
                                                         </li>
                                                     </ul>
                                                 </div>
 
                                             </div>
+
                                         </div>
                                         <div className="row" style={{ height: "43%" }}>
                                             <div className="col">

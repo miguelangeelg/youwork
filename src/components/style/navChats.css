@@ -15,6 +15,7 @@
   float: right;
   border-left: thick solid #b9b9b9;
   border-width: 1px;
+  z-index: 5;
 }
 
 .sidebar2 .logo_content .logo {

@@ -2,7 +2,7 @@ import React, {useState} from 'react';
 import { AutoComplete } from 'primereact/autocomplete';
 import './style/navTop.css';
 
-import userThree from '../assets/img/users/user3.png';
+import userThree from '../assets/img/users/meProfile';
 
 const NavTop = () => {
 
@@ -34,7 +34,7 @@ const NavTop = () => {
 
     return (
         <div className="containerNavbarTop">
-            <nav className="navbar-expand-lg  p-2">
+            <nav className="navbar-expand-lg  p-2" style={{zIndex:4}}>
                 <div className="row">
                     <div className="col-2">
                         <form className="d-flex d-flex justify-content-start">
@@ -67,8 +67,8 @@ const NavTop = () => {
                                     <span className="tooltipProfile">Ver Perfil</span>
                                     <img alt="some" className="userAvatar" src={userThree} />
                                 </li>
-                                <li className="nav-item">
-                                    Daniela Ramirez
+                                <li className="nav-item" style={{display:"flex",alignItems:"center"}}>
+                                    <p style={{margin:0}}>Miguel Angel Gutiérrez</p>
                                 </li>
                             </ul>
                         </div>

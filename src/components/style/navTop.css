@@ -62,7 +62,7 @@
 .tooltipProfile {
   position: absolute;
   top: 40px;
-  right: calc(10% + 15px);
+  /* right: calc(10% + 15px); */
   z-index: 3;
   background: #fff;
   box-shadow: 0 5px 10px rgba(0, 0, 0, 0.3);

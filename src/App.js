@@ -40,7 +40,7 @@ function App() {
 
               </div>
             </div>
-            <div className='row contentPage'>
+            <div className='row contentPage' style={{zIndex:0}}>
               <div className='col'>
                 <Route path='/' exact component={Home} />
                 <Route path="/searchJob" component={SearchJob}/>
