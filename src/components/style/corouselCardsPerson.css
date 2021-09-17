@@ -19,7 +19,7 @@
 }
 
 .row-infoBetterPerson{
-  margin-top: 30px;
+  margin-top: 22px;
 }
 
 /* 
@@ -58,7 +58,7 @@
 }
 
 .titleJobCard .titleText {
-  font-size: 17px;
+  /* font-size: 17px; */
   padding-top: 7px;
   color: white;
 }
@@ -95,9 +95,13 @@
 }
 
 .betterPersons .col b {
-  font-size: 13px;
+  font-size: 14px;
   justify-content: left;
   font-weight: bolder;
+}
+
+.betterPersons .valueTitleBetterPerson{
+  font-size: 14px;
 }
 
 .betterPersons .cardContent {
@@ -131,7 +135,7 @@
 }
 
 .calitifationstring {
-  font-size: 13px;
+  /* font-size: 13px; */
   color: #007dc0;
   margin-top: 2px;
 }

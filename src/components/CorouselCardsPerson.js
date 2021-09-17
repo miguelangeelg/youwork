@@ -126,16 +126,16 @@ const CorouselCardsPerson = (props) => {
                                                 <div className="userinfo">
                                                     <ul>
                                                         <li>
-                                                            <b><span className="titleUser">Profeción:</span>  {" "+person[1].dedication}</b>
+                                                            <b><span className="titleUser index">Profeción:</span></b> <span className="valueTitleBetterPerson"> {" "+person[1].dedication}</span>
                                                         </li>
                                                         <li>
-                                                            <b><span className="titleUser">Edad:</span>  {" "+person[1].age} años</b>
+                                                            <b><span className="titleUser index">Edad:</span> </b> <span className="valueTitleBetterPerson"> {" "+person[1].age} años </span>
                                                         </li>
                                                         <li>
-                                                            <b><span className="titleUser">Experiencia:</span>  {" "+person[1].experience} años</b>
+                                                            <b><span className="titleUser index">Experiencia:</span> </b> <span className="valueTitleBetterPerson"> {" "+person[1].experience} años </span>
                                                         </li>
                                                         <li >
-                                                            <b><span className="calitifationstring titleUser">Calificación: </span>  <span> 4.3</span></b>
+                                                            <b><span className="calitifationstring titleUser index">Calificación: </span></b> <span className="valueTitleBetterPerson"> 4.3</span>
                                                         </li>
                                                     </ul>
                                                 </div>
