@@ -1,3 +1,187 @@
+
+
+.divBtnPersonCard{
+  width: 100%;
+  position: absolute;
+  bottom: 108px;
+}
+.wrapper {
+  height: 98%;
+}
+.wrapper:focus {
+  outline: 0;
+}
+
+.clash-card__unit-description{
+    font-size: 14px;
+    margin-left: 10px;
+    margin-right: 10px;
+}
+
+.clash-card {
+  background: white;
+  width: 96%;
+  display: inline-block;
+  margin: auto;
+  border-radius: 19px;
+  position: relative;
+  text-align: center;
+  box-shadow: 0 2px 2px rgba(0, 0, 0, 0.3);
+  cursor: pointer;
+  height: 100%;
+}
+
+.clash-card__image {
+  position: relative;
+  height: 135px;
+  margin-bottom: 35px;
+  border-top-left-radius: 14px;
+  border-top-right-radius: 14px;
+}
+
+
+.clash-card__image--barbarian img {
+    height: 140px;
+    width: 140px;
+    border-radius: 100%;
+    padding-left: 5px;
+    margin-bottom: 5px;
+    margin-top: 20px;
+
+}
+
+.clash-card__image--archer {
+  background: url("https://s3-us-west-2.amazonaws.com/s.cdpn.io/195612/archer-bg.jpg");
+}
+.clash-card__image--archer img {
+  width: 400px;
+  position: absolute;
+  top: -34px;
+  left: -37px;
+}
+
+.clash-card__image--giant {
+  background: url("https://s3-us-west-2.amazonaws.com/s.cdpn.io/195612/giant-bg.jpg");
+}
+.clash-card__image--giant img {
+  width: 340px;
+  position: absolute;
+  top: -30px;
+  left: -25px;
+}
+
+.clash-card__image--goblin {
+  background: url("https://s3-us-west-2.amazonaws.com/s.cdpn.io/195612/goblin-bg.jpg");
+}
+.clash-card__image--goblin img {
+  width: 370px;
+  position: absolute;
+  top: -21px;
+  left: -37px;
+}
+
+
+
+.clash-card__level {
+  text-transform: uppercase;
+  font-size: 12px;
+  font-weight: 700;
+  margin-bottom: 3px;
+}
+
+.clash-card__level--barbarian {
+  color: #007dc0;
+}
+
+
+.clash-card__level--giant {
+  color: #007dc0;
+}
+
+
+
+.clash-card__unit-name {
+  font-size: 15px;
+  color: black;
+  font-weight: 900;
+  margin-bottom: 5px;
+}
+
+
+
+.clash-card__unit-stats--barbarian {
+  background: #007dc0;
+}
+.clash-card__unit-stats--barbarian .one-third {
+  border-right: 1px solid #ffffff;
+}
+
+.clash-card__unit-stats--giant {
+  background: #007dc0;
+}
+.clash-card__unit-stats--giant .one-third {
+  border-right: 1px solid #007dc0;
+}
+
+
+
+.clash-card__unit-stats {
+  color: white;
+  font-weight: 700;
+  border-bottom-left-radius: 14px;
+  border-bottom-right-radius: 14px;
+  position: absolute;
+  bottom: 0px;
+  width: 100%;
+}
+.clash-card__unit-stats .one-third {
+  width: 33%;
+  float: left;
+  padding: 20px 15px;
+}
+.clash-card__unit-stats sup {
+  position: absolute;
+  bottom: 4px;
+  font-size: 45%;
+  margin-left: 2px;
+}
+.clash-card__unit-stats .stat {
+  position: relative;
+  /* font-size: 24px; */
+  margin-bottom: 10px;
+}
+.clash-card__unit-stats .stat-value {
+  text-transform: uppercase;
+  font-weight: 400;
+  font-size: 12px;
+}
+.clash-card__unit-stats .no-border {
+  border-right: none;
+}
+
+.clearfix:after {
+  visibility: hidden;
+  display: block;
+  font-size: 0;
+  content: " ";
+  clear: both;
+  height: 0;
+}
+
+.slick-prev {
+  left: 100px;
+  z-index: 999;
+}
+
+.slick-next {
+  right: 100px;
+  z-index: 999;
+}
+
+/* viejo modelo */
+
+
+
 .cardbetterPerson {
   position: relative;
   background: white;
@@ -68,20 +252,24 @@
   margin: 10px;
 }
 
-.cardbetterPerson button {
+.wrapper button {
   /* position: relative; */
-  border-color: #007dc0;
-  background: #ffffff;
-  color: #007dc0;
+  border-color: white;
+  background: #007dc0;
+  color: white;
   border-radius: 6px;
   bottom: 5px;
+  width: 35%;
+  height: 33px;
   border-width: 1px;
+  font-size: 13px;
 }
 
-.cardbetterPerson button:hover {
-  background: #007dc0;
-  color: #ffffff;
-  transition: all 0.1s ease;
+ 
+
+.wrapper button:hover {
+  background: #00466b;
+  color: white;
 }
 
 .betterPersons .col img {

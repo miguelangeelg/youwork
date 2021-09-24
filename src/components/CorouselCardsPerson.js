@@ -23,7 +23,8 @@ const list = Object.entries({
         "photo": userOne,
         "dedication": "Jardinero, +5 mas",
         "age": 39,
-        "experience": 5
+        "experience": 5,
+        "description": "Soy una hombre berraco echado para adelante con mucha experiencia para aportar en todas mis areas."
     },
     "Manuela Rodriguez": {
         "id": "2",
@@ -31,7 +32,8 @@ const list = Object.entries({
         "photo": userTwo,
         "dedication": "Enfermera",
         "age": 24,
-        "experience": 3
+        "experience": 3,
+        "description": "Me gusta cuidar niños, abuelos. Presto atención 24/7 solo con reserva de 24 horas antes."
     },
     "Vanessa Zapata": {
         "id": "3",
@@ -39,7 +41,8 @@ const list = Object.entries({
         "photo": userThree,
         "dedication": "Aseadora",
         "age": 29,
-        "experience": 0
+        "experience": 0,
+        "description": "Me gusta hacer aseo, mujer apasionada por dejar todo en orden y muy detallista a la hora de realizar mi trabajo."
     },
     "Juan Fernando Q": {
         "id": "4",
@@ -47,7 +50,8 @@ const list = Object.entries({
         "photo": userFour,
         "dedication": "Mensajero",
         "age": 19,
-        "experience": 4
+        "experience": 4,
+        "description": "Tengo 4 años de experiencia siendo mensajero, me se todas las rutas de la ciudad y soy muy cuidadoso con  lo que llevo."
     },
     "Mariano Falda": {
         "id": "5",
@@ -55,7 +59,8 @@ const list = Object.entries({
         "photo": userFive,
         "dedication": "Desarrollador",
         "age": 24,
-        "experience": 3
+        "experience": 3,
+        "description": "Soy una hombre berraco echado para adelante con mucha experiencia para aportar en todas mis areas."
     },
     "Andres Zapata": {
         "id": "6",
@@ -63,7 +68,8 @@ const list = Object.entries({
         "photo": userSix,
         "dedication": "Archivista",
         "age": 28,
-        "experience": 2
+        "experience": 2,
+        "description": "Soy una hombre berraco echado para adelante con mucha experiencia para aportar en todas mis areas."
     }
 })
 
@@ -102,12 +108,44 @@ const CorouselCardsPerson = (props) => {
                         slidesPerView: 2
                     }
                 }}
-                style={{ width: "100%", height: "400px" }}>
+                style={{ width: "100%", height: "440px" }}>
                 {
                     list.map((person, i) => {
                         return (
                             <SwiperSlide className="betterPersons" key={Math.random()} >
-                                <div className="cardbetterPerson">
+
+            <div className="wrapper">
+                <div className="clash-card barbarian">
+                    <div className="clash-card__image clash-card__image--barbarian">
+                        <img  src={person[1].photo} alt="barbarian" />
+                    </div>
+                    <div className="clash-card__level clash-card__level--barbarian">Level 4</div>
+                    <div className="clash-card__unit-name">{person[1].name}</div>
+                    <div className="clash-card__unit-description">
+                        {person[1].description}
+                    </div>
+                    <div className="divBtnPersonCard">
+                        <button onClick={() => { openModal(person[1].id) }} data-bs-toggle="modal" data-bs-target="#exampleModalCenter">Ver Perfil</button>
+                    </div>
+                    <div className="clash-card__unit-stats clash-card__unit-stats--barbarian clearfix">
+                        <div className="one-third">
+                            <div className="stat">{" "+person[1].age}</div>
+                            <div className="stat-value">Edad</div>
+                        </div>
+                        <div className="one-third">
+                            <div className="stat">{" "+person[1].experience} Años</div>
+                            <div className="stat-value">Experiencia</div>
+                        </div>
+                        <div className="one-third no-border">
+                            <div className="stat">4.5</div>
+                            <div className="stat-value">Calificación</div>
+                        </div>
+                    </div>
+                </div>
+          
+            </div>
+
+                                {/* <div className="cardbetterPerson">
                                     <div className="grid">
                                         <div className="row">
                                             <div className="col">
@@ -152,7 +190,7 @@ const CorouselCardsPerson = (props) => {
                                             </div>
                                         </div>
                                     </div>
-                                </div>
+                                </div> */}
                             </SwiperSlide>
                         )
                     })
