@@ -9,7 +9,6 @@ import 'primereact/resources/themes/saga-blue/theme.css'
 import 'primereact/resources/primereact.min.css'
 import 'primeicons/primeicons.css'
 import './style.css'
-import NewCard from './components/NewCard';
 function App() {
 
   const btnActive = () => {
@@ -44,7 +43,7 @@ function App() {
             <div className='row contentPage' style={{zIndex:0}}>
               <div className='col'>
                 <Route path='/' exact component={Home} />
-                <Route path="/searchJob" component={NewCard}/>
+                <Route path="/searchJob" component={SearchJob}/>
               </div>
             </div>
           </div>

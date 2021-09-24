@@ -119,7 +119,7 @@ const CorouselCardsPerson = (props) => {
                     <div className="clash-card__image clash-card__image--barbarian">
                         <img  src={person[1].photo} alt="barbarian" />
                     </div>
-                    <div className="clash-card__level clash-card__level--barbarian">Level 4</div>
+                    <div className="clash-card__level clash-card__level--barbarian"> {person[1].dedication}</div>
                     <div className="clash-card__unit-name">{person[1].name}</div>
                     <div className="clash-card__unit-description">
                         {person[1].description}
