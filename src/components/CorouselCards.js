@@ -95,6 +95,10 @@ const CorouselCards = (props) => {
       <Swiper
         spaceBetween={4.2}
         slidesPerView={1}
+        navigation={{
+          nextEl: '.swiper-button-next',
+          prevEl: '.swiper-button-prev',
+        }}
         breakpoints={{
           // when window width is >= 640px
           1180: {
@@ -109,6 +113,8 @@ const CorouselCards = (props) => {
         // onSwiper={(swiper) => console.log(swiper)}
         style={{ width: "100%", height: 350 }}
       >
+          <div className="swiper-button-next"></div>
+          <div className="swiper-button-prev"></div>
         {
           jobs.map((job) => {
             return (

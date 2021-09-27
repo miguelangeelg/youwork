@@ -99,6 +99,10 @@ const CorouselCardsPerson = (props) => {
             <Swiper
                 spaceBetween={4.2}
                 slidesPerView={1}
+                navigation={{
+                    nextEl: '.swiper-button-next',
+                    prevEl: '.swiper-button-prev',
+                }}
                 breakpoints={{
                     // when window width is >= 640px
                     1180: {
@@ -109,6 +113,8 @@ const CorouselCardsPerson = (props) => {
                     }
                 }}
                 style={{ width: "100%", height: "440px" }}>
+                         <div className="swiper-button-next"></div>
+                         <div className="swiper-button-prev"></div>
                 {
                     list.map((person, i) => {
                         return (
