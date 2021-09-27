@@ -134,11 +134,11 @@ const CorouselCardsPerson = (props) => {
                         </div>
                         <div className="one-third">
                             <div className="stat">{" "+person[1].experience} Años</div>
-                            <div className="stat-value">Experiencia</div>
+                            <div className="stat-value">Exp</div>
                         </div>
                         <div className="one-third no-border">
                             <div className="stat">4.5</div>
-                            <div className="stat-value">Calificación</div>
+                            <div className="stat-value">Score</div>
                         </div>
                     </div>
                 </div>

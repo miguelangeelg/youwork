@@ -1,3 +1,14 @@
+
+.divBtnCardJob{
+ background: #007dc0 ;
+ border-radius: 0px 0px 6px 6px;
+ position: absolute;
+ width: 100%;
+ bottom: 0px;
+ height: 40px;
+}
+ 
+
 .cardBetterJob {
   position: relative;
   background: white;
@@ -21,17 +32,44 @@
   padding-right: 0px !important;
 }
 
-.titleJobCard {
-  border-radius: 6px 6px 0 0px !important;
-  position: relative;
-  background: #007dc0;
-  height: auto;
-}
+/* */
 
 .titleJobCard .titleText {
-  font-size: 17px;
-  padding-top: 7px;
-  color: white;
+  font-size: 16px;
+  padding-top: 17px;
+  font-weight: 900;
+  color: #007dc0;
+  /* color: white; */
+}
+
+.description .bxs-location-plus{
+  font-size: 20px;
+  position: relative;
+  top: 2px;
+  color:#007dc0;
+  padding-right: 7px;
+}
+
+.description .bx-dollar{
+  font-size: 20px;
+  position: relative;
+  top: 2px;
+  color:#007dc0;
+  padding-right: 7px;
+}
+
+.description .bxs-calendar{
+  font-size: 20px;
+  position: relative;
+  top: 2px;
+  color:#007dc0;
+  padding-right: 6px;
+}
+
+.divItemsCardJob{
+  display: flex;
+  font-size: 14px;
+  padding-bottom: 4px;
 }
 
 .cardBetterJob .bodyCardJob {
@@ -41,6 +79,23 @@
 
 .description {
   padding-top: 21px;
+  margin-left: 20px;
+  margin-right: 20px;
+}
+
+.description .descriptionTitle{
+  margin-bottom: 1px;
+  font-size: 14px;
+  text-align: justify;
+  font-weight: bold;
+  color: black;
+  
+}
+
+.description p{
+  text-align: left;
+  font-size: 14px;
+  height: 55px;
 }
 
 .description small {
@@ -49,18 +104,22 @@
 }
 
 .cardBetterJob button {
-  border-color: #007dc0;
-  background: #ffffff;
-  color: #007dc0;
-  border-radius: 6px;
-  bottom: 5px;
+  /* border-color: #007dc0; */
+  border-color: transparent;
+  background: #007dc0;
+  color: #ffff;
+  /* border-radius: 6px; */
+  /* bottom: 5px; */
   border-width: 1px;
+  font-size: 16px;
+  width: 100%;
+  border-radius: 0px 0px 6px 6px;
+  height: 100%;
 }
 
-.cardBetterJob button:hover {
-  background: #007dc0;
-  color: #ffffff;
-  transition: all 0.1s ease;
+.cardBetterJob button:hover{
+  background: #00466b;
+  height: 100%;
 }
 
 

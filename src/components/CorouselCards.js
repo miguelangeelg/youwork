@@ -19,7 +19,7 @@ let jobs = Object.entries({
     "date": "04/10/2021",
     "salary": "45.000",
     "location": "Medellín, Antioquia",
-    "employer":"Manuel Medrano",
+    "employer": "Manuel Medrano",
     "employerScore": "4.5",
     "postedDate": "publicado 2 dias atras"
   },
@@ -30,7 +30,7 @@ let jobs = Object.entries({
     "date": "26/10/2021",
     "salary": "35.000",
     "location": "Medellín, Antioquia",
-    "employer":"Jaime Rodriguez",
+    "employer": "Jaime Rodriguez",
     "employerScore": "4.9",
     "postedDate": "publicado 3 dias atras"
   },
@@ -40,7 +40,7 @@ let jobs = Object.entries({
     "date": "29/11/2021",
     "salary": "50.000",
     "location": "Bello, Antioquia",
-    "employer":"Miguel Zapata",
+    "employer": "Miguel Zapata",
     "employerScore": "5.0",
     "description": "Necesito un desarrollador con conocimientos en node...",
     "postedDate": "publicado 3 dias atras"
@@ -51,7 +51,7 @@ let jobs = Object.entries({
     "date": "23/12/2021",
     "salary": "240.000",
     "location": "Medellín, Antioquia",
-    "employer":"Wilson Canabrea",
+    "employer": "Wilson Canabrea",
     "employerScore": "3.9",
     "description": "Busco un conductor para ir a la piedra del peñon el saba...",
     "postedDate": "publicado hoy"
@@ -62,7 +62,7 @@ let jobs = Object.entries({
     "date": "16/09/2021",
     "salary": "23.000",
     "location": "Medellín, Antioquia",
-    "employer":"Santiago Orrego",
+    "employer": "Santiago Orrego",
     "employerScore": "4.5",
     "description": "Necesito un médico para que me diagnostique...",
     "postedDate": "publicado ayer"
@@ -72,12 +72,12 @@ let jobs = Object.entries({
 
 const CorouselCards = (props) => {
 
-  const  {jobSelected, modalType} = props;
-  
+  const { jobSelected, modalType } = props;
+
   // useEffect(() => {
-    
-    // }, [])
-    
+
+  // }, [])
+
   const openModal = (e) => {
     modalType("job");
     let job;
@@ -107,7 +107,7 @@ const CorouselCards = (props) => {
 
         // onSlideChange={() => console.log('slide change')}
         // onSwiper={(swiper) => console.log(swiper)}
-        style={{ width: "100%", height: 259 }}
+        style={{ width: "100%", height: 350 }}
       >
         {
           jobs.map((job) => {
@@ -125,18 +125,30 @@ const CorouselCards = (props) => {
                     <div className="row">
                       <div className="col">
                         <div className="description">
+                          <div className="descriptionTitle">Descripción:</div>
                           <p>
                             {job[1].description}
                           </p>
+                          <div className="divItemsCardJob">
+                            <i className='bx bxs-location-plus'></i>
+                            Medellín
+                          </div>
+                          <div className="divItemsCardJob">
+                            <i className='bx bxs-calendar'></i>
+                              Fecha para trabajar: 2021-10-23
+                          </div>
+                          <div className="divItemsCardJob">
+                             <i className='bx bx-dollar'></i>
+                              32.000 COP X Hora
+                          </div>
+
                           <small>{job[1].postedDate}</small>
                         </div>
 
                       </div>
                     </div>
-                    <div className="row" style={{ display: "flex", alignContent: "center", textAlign: "center", height: "24%" }}>
-                      <div className="col">
-                        <button className="seeMoreInfoCardJob" onClick={() => { openModal(job[1].id) }} data-bs-toggle="modal" data-bs-target="#exampleModalCenter" >Ver mas información</button>
-                      </div>
+                    <div className="divBtnCardJob">
+                      <button className="seeMoreInfoCardJob" onClick={() => { openModal(job[1].id) }} data-bs-toggle="modal" data-bs-target="#exampleModalCenter" >Ver mas información</button>
                     </div>
 
                   </div>

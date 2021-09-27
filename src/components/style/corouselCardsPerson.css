@@ -229,18 +229,7 @@
   padding-right: 0px !important;
 }
 
-.titleJobCard {
-  border-radius: unset;
-  position: relative;
-  background: #007dc0;
-  height: auto;
-}
 
-.titleJobCard .titleText {
-  /* font-size: 17px; */
-  padding-top: 7px;
-  color: white;
-}
 
 .cardbetterPerson .betterPersons {
   padding-top: 10px;
