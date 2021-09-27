@@ -65,7 +65,7 @@ const JobList = () => {
                                                         <div className="itemJobList">
                                                         <div> <span style={{ "color": "#007dc0" }}> <i className='bx bxs-location-plus'></i></span> Medellín</div>
 
-                                                        <div> <span style={{ "color": "#007dc0" }}> <i className='bx bxs-calendar'></i></span> Fecha para trabajar: 2021-10-23 </div>
+                                                        <div style={{textAlign:"left"}}> <span style={{ "color": "#007dc0" }}> <i className='bx bxs-calendar'></i></span> Fecha para trabajar: 2021-10-23 </div>
                                                         <div> <span style={{ "color": "#007dc0" }}><i className='bx bx-dollar'></i></span> Acordado  </div>
                                                         <div> <span style={{ "color": "#007dc0" }}><i className='bx bxs-time'></i></span>Publicado 2 dias atras. </div>
                                                         </div>
@@ -73,7 +73,7 @@ const JobList = () => {
                                                 </div>
                                                 <div className="col-3" style={{display:"flex", alignItems:"center", justifyContent:"center"}}>
                                                     <div className="containerbuttonInfo">
-                                                        <button className="buttonLookJob">Ver trabajo</button>
+                                                        <button className="buttonLookJob">Ver Empleo</button>
                                                     </div>
                                                 </div>
                                             </div>

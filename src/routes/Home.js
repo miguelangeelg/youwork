@@ -75,7 +75,7 @@ const Home = () => {
             </div>
             <div className="corouseldiv row p-3">
                 <div className="titleBetterJobs ">
-                    <h4 className="d-flex justify-content-start">Mas trabajos...
+                    <h4 className="d-flex justify-content-start">Mas Empleos...
                         <i className='bx bxs-star'></i>
                     </h4>
                     <hr />

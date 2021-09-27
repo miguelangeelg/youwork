@@ -43,7 +43,7 @@ const NavTop = () => {
                           value={selectedJob1}
                           suggestions={filteredJobs}
                           completeMethod={searchJob}
-                          placeholder="Buscar Trabajo"
+                          placeholder="Buscar Empleo"
                           field="name"
                           onChange={(e) => setSelectedJob1(e.value)}
                           />
