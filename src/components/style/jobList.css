@@ -12,9 +12,23 @@
     border-radius: 6px 0px 0 12px;
 }
 
+.jobDescriptionList .bx{
+    font-size: 20px;
+  position: relative;
+  top: 2px;
+  color:#007dc0;
+  padding-right: 7px;
+  padding-bottom: 7px;
+}
+
+
+.jobDescriptionList  .itemJobList{
+    padding-top: 20px;
+}
+
 .listCard .buttonLookJob{
-    background: white;
-    color: #007dc0;
+    background: #007dc0;
+    color: white;
     border-color: #007dc0;
     border-width: 1px;
     border-radius: 6px;
@@ -24,9 +38,8 @@
 }
 
 .listCard .buttonLookJob:hover{
-    background: #007dc0;
-    color: white;
-    transition: all 0.5s ease;
+    background: #00466b;
+  
 }
 
 .listCard .iconCardList .bx{

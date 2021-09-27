@@ -6,7 +6,7 @@ import './style/jobList.css';
 const list = [
     {
         "title": "Ayudante de construcción",
-        "description": "Necesito un muchacho joven para algunos dias.",
+        "description": `Lorem Ipsum es simplemente el texto de relleno de las imprentas y archivos de texto. Lorem Ipsum ha .`,
         "icon" :"bxs-wrench",
         "by":"Manuel Medrano"
     },
@@ -62,9 +62,13 @@ const JobList = () => {
                                                 <div className="col-9">
                                                     <div className="jobDescriptionList">
                                                         <div> <span style={{ "color": "#007dc0" }}>Descripción: </span> {job.description} </div>
-                                                        <div> <span style={{ "color": "#007dc0" }}>Salario: </span> Acordado  </div>
-                                                        <div> <span style={{ "color": "#007dc0" }}>Publicador: </span> <a href="/#" style={{ color: "#007dc0" }}>{job.by}</a> </div>
-                                                        <div> <span style={{ "color": "#007dc0" }}>Fecha de publicación: </span> 2 dias atras. </div>
+                                                        <div className="itemJobList">
+                                                        <div> <span style={{ "color": "#007dc0" }}> <i className='bx bxs-location-plus'></i></span> Medellín</div>
+
+                                                        <div> <span style={{ "color": "#007dc0" }}> <i className='bx bxs-calendar'></i></span> Fecha para trabajar: 2021-10-23 </div>
+                                                        <div> <span style={{ "color": "#007dc0" }}><i className='bx bx-dollar'></i></span> Acordado  </div>
+                                                        <div> <span style={{ "color": "#007dc0" }}><i className='bx bxs-time'></i></span>Publicado 2 dias atras. </div>
+                                                        </div>
                                                     </div>
                                                 </div>
                                                 <div className="col-3" style={{display:"flex", alignItems:"center", justifyContent:"center"}}>
