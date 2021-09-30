@@ -1,9 +1,10 @@
 .goThereModal{
-    background: #007dc0;
-    border-color: white;
-    color: white;
-    border-radius: 6px;
+    background: #007dc0 !important;
+    border-color: white !important;
+    color: white !important;
+    border-radius: 6px !important;
 }
+
 
 /* .goThereModal:hover{
     background: white;
@@ -58,4 +59,21 @@
     color: white;
     background: #007dc0;
 
+}
+
+
+/* DialogDemo.css */
+
+.dialog-demo .p-button {
+    margin: 0 .5rem 0 0;
+    min-width: 10rem;
+}
+
+.dialog-demo p {
+    margin: 0;
+    line-height: 1.5;
+}
+
+.dialog-demo .p-dialog .p-button {
+    min-width: 6rem;
 }

@@ -12,14 +12,15 @@ import ModalContent from '../components/ModalContent';
 // import $ from 'jquery';
 const Home = () => {
     const [infoModal, setInfoModal] = useState("");
-    const [modalType, setModalType] = useState("")
+    const [modalType, setModalType] = useState("");
+    const [openModal, setOpenModal] = useState(false);
 
 
     return (
         <div className="p-2 contentHomeAbsolute">
             {
                 infoModal ? (
-                    <Modal title={infoModal.title} modalType={modalType}>
+                    <Modal title={infoModal.title} modalType={modalType} openModal={openModal} setOpenModal={setOpenModal}>
                         <ModalContent type={modalType} data={infoModal} />
                     </Modal>
                 ) : (
@@ -61,7 +62,7 @@ const Home = () => {
                     </h4> <small>Deliza hacia la izquierda para ver mas... </small>
                     <hr />
                 </div>
-                <CorouselCards jobSelected={setInfoModal} modalType={setModalType} />
+                <CorouselCards jobSelected={setInfoModal} modalType={setModalType} setOpenModal={setOpenModal} />
             </div>
             <div className="corouseldiv row p-3">
                 <div className="titleBetterJobs ">
@@ -71,7 +72,7 @@ const Home = () => {
                     <small>Deliza hacia la izquierda para ver mas... </small>
                     <hr />
                 </div>
-                <CorouselCardsPerson userSelected={setInfoModal} modalType={setModalType} />
+                <CorouselCardsPerson userSelected={setInfoModal} modalType={setModalType} setOpenModal={setOpenModal}/>
             </div>
             <div className="corouseldiv row p-3">
                 <div className="titleBetterJobs ">

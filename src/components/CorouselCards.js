@@ -72,7 +72,7 @@ let jobs = Object.entries({
 
 const CorouselCards = (props) => {
 
-  const { jobSelected, modalType } = props;
+  const { jobSelected, modalType, setOpenModal } = props;
 
   // useEffect(() => {
 
@@ -88,6 +88,7 @@ const CorouselCards = (props) => {
       }
     });
     jobSelected(job);
+    setOpenModal(true);
   }
 
   return (
@@ -154,7 +155,7 @@ const CorouselCards = (props) => {
                       </div>
                     </div>
                     <div className="divBtnCardJob">
-                      <button className="seeMoreInfoCardJob" onClick={() => { openModal(job[1].id) }} data-bs-toggle="modal" data-bs-target="#exampleModalCenter" >Ver mas información</button>
+                      <button className="seeMoreInfoCardJob" onClick={() => { openModal(job[1].id) }}  >Ver mas información</button>
                     </div>
 
                   </div>

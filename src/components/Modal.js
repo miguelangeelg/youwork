@@ -1,38 +1,51 @@
 import React from 'react';
-import Portal from './Portal';
+// import Portal from './Portal';
+import { useState, useEffect } from 'react';
+import { Dialog } from 'primereact/dialog';
 import './style/modal.css';
+import { Button } from 'primereact/button';
+// import { Tooltip } from 'primereact/tooltip';
 
 const Modal = (props) => {
 
-    const { children, title, modalType } = props;
+    const { children, title, modalType, openModal, setOpenModal } = props;
+
+    const [displayBasic2, setDisplayBasic2] = useState(false);
+
+    useEffect(() => {
+        if (openModal === true) {
+            setDisplayBasic2(true);
+        }
+    }, [openModal])
+
+
+    const onHide = () => {
+        setDisplayBasic2(false);
+        setOpenModal(false);
+    }
+
+    const renderFooter = () => {
+        return (
+            <div>
+                <Button label="Cerrar" icon="pi pi-times" onClick={() => onHide()} className="p-button-text" />
+
+                {
+                    modalType === "job" ? (
+                        <Button label="Aplicar" className="goThereModal" icon="pi pi-check" onClick={() => onHide()} autoFocus />
+                    ) : (
+                        <Button label="Contactar"  className="goThereModal"  icon="pi pi-check" autoFocus />
+                    )
+
+                }
+            </div>
+        );
+    }
 
     return (
-        <Portal>
-            <div className="modal" id="exampleModalCenter" tabIndex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
-                <div className="modal-dialog modal-dialog-centered" role="document">
-                    <div className="modal-content">
-                        <div className="modal-header">
-                            <h5 style={{color:"#007dc0"}} className="modal-title titleJobCardModal" id="exampleModalLabel" >{title}</h5>
-                            <button type="button" className="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                        </div>
-                        <div className="modal-body">
-                            {children}
-                        </div>
-                        <div className="modal-footer">
-                            <button type="button" className="btn btn-secondary closeModalButton" data-bs-dismiss="modal">Cerrar</button>
-                            {
-                                modalType === "job" ? (
-                                    <button type="button" className="btn btn-primary goThereModal">Aplicar</button>
-                                ) : (
-                                    <button type="button" className="btn btn-primary goThereModal">Contactar</button>
-                                )
 
-                            }
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </Portal>
+        <Dialog header={title} visible={displayBasic2} style={{ width: 480 }} footer={renderFooter()} onHide={() => onHide()}>
+            {children}
+        </Dialog>
     )
 
 }

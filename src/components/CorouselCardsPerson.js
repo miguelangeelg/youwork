@@ -75,7 +75,7 @@ const list = Object.entries({
 
 const CorouselCardsPerson = (props) => {
 
-    const { userSelected, modalType } = props;
+    const { userSelected, modalType, setOpenModal } = props;
 
     // useEffect(() => {
 
@@ -92,6 +92,7 @@ const CorouselCardsPerson = (props) => {
             }
         });
         userSelected(user);
+        setOpenModal(true);
     }
 
     return (
@@ -131,7 +132,7 @@ const CorouselCardsPerson = (props) => {
                         {person[1].description}
                     </div>
                     <div className="divBtnPersonCard">
-                        <button onClick={() => { openModal(person[1].id) }} data-bs-toggle="modal" data-bs-target="#exampleModalCenter">Ver Perfil</button>
+                        <button onClick={() => { openModal(person[1].id) }} >Ver Perfil</button>
                     </div>
                     <div className="clash-card__unit-stats clash-card__unit-stats--barbarian clearfix">
                         <div className="one-third">
