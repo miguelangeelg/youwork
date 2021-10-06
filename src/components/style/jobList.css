@@ -1,3 +1,127 @@
+.cardJobList{
+    background: white;
+    margin-bottom: 25px;
+    box-shadow: 0 2px 2px rgba(0, 0, 0, 0.3);
+    border-radius: 6px;
+    padding-right: 0px;
+    padding-left: 0px;
+}
+
+.titleJobList .titleText {
+    font-size: 16px;
+    padding-top: 17px;
+    font-weight: 900;
+    color: #007dc0;
+    /* color: white; */
+  }
+
+  .descriptionJobList .bxs-location-plus{
+    font-size: 20px;
+    position: relative;
+    top: 2px;
+    color:#007dc0;
+    padding-right: 7px;
+  }
+  
+  .descriptionJobList .bx-dollar{
+    font-size: 20px;
+    position: relative;
+    top: 2px;
+    color:#007dc0;
+    padding-right: 7px;
+  }
+  
+  .descriptionJobList .bxs-calendar{
+    font-size: 20px;
+    position: relative;
+    top: 2px;
+    color:#007dc0;
+    padding-right: 6px;
+  }
+
+  .divItemsCardJob{
+    display: flex;
+    font-size: 14px;
+    padding-bottom: 4px;
+  }
+  
+  .cardBetterJob .bodyCardJob {
+    padding-top: 10px;
+    margin: 10px;
+  }
+  
+  .descriptionJobList {
+    padding-top: 21px;
+    margin-left: 20px;
+    margin-right: 20px;
+  }
+  
+  .descriptionJobList .descriptionTitle{
+    margin-bottom: 1px;
+    font-size: 14px;
+    text-align: justify;
+    font-weight: bold;
+    color: black;
+    
+  }
+  .divItemsJobList{
+    display: flex;
+    font-size: 14px;
+    padding-bottom: 4px;
+  }
+
+  .descriptionJobList p{
+    text-align: left;
+    font-size: 14px;
+    height: 55px;
+    margin-bottom: 0px;
+  }
+  
+  .descriptionJobList small {
+    color: rgb(158, 158, 158);
+    font-size: 13px;
+  }
+  
+  .cardBetterJob button {
+    /* border-color: #007dc0; */
+    border-color: transparent;
+    background: #007dc0;
+    color: #ffff;
+    /* border-radius: 6px; */
+    /* bottom: 5px; */
+    border-width: 1px;
+    font-size: 16px;
+    width: 100%;
+    border-radius: 0px 0px 6px 6px;
+    height: 100%;
+  }
+  
+  .cardJobList button:hover{
+    background: #00466b;
+    height: 100%;
+  }
+
+  .cardJobList button {
+    /* border-color: #007dc0; */
+    border-color: transparent;
+    background: #007dc0;
+    color: #ffff;
+    /* border-radius: 6px; */
+    /* bottom: 5px; */
+    border-width: 1px;
+    font-size: 16px;
+    width: 100%;
+    border-radius: 0px 0px 6px 6px;
+    height: 100%;
+    margin-top: 6px;
+  }
+  
+  .cardJobList button:hover{
+    background: #00466b;
+    height: 100%;
+  }
+/* 
+
 .listCard{
     background: white;
     margin-top: 10px;
@@ -61,4 +185,4 @@
     text-align: justify;
     padding-left: 20px;
     padding-bottom: 20px;
-}
+} */

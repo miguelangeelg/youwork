@@ -28,6 +28,10 @@
     bottom: 3px;
 }
 
+.p-autocomplete{
+    display: inline;
+}
+
 .btnSearchMobile:hover{
     color: #ffffff;
     background: #007dc0;
