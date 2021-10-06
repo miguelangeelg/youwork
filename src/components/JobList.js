@@ -5,37 +5,82 @@ import './style/jobList.css';
 
 const list = [
     {
+        "id": 1,
         "title": "Ayudante de construcción",
-        "description": `Lorem Ipsum es simplemente el texto de relleno de las imprentas y archivos de texto. Lorem Ipsum ha .`,
+        "description": `Lorem Ipsum es simplemente el texto de relleno de las imprentas y archivos de texto. Lorem Ipsum ha sido el texto de relleno estándar de las industrias desde el año 1500, cuando un impresor (N. del T. persona que se dedica a la imprenta) desconocido usó una galería de textos y los mezcló de tal manera que logró hacer un libro de textos especimen. No sólo sobrevivió 500 años, sino que tambien ingresó como texto de relleno en documentos electrónicos, quedando esencialmente igual al original. Fue popularizado en los 60s con la creación de las hojas "Letraset", las cuales contenian pasajes de Lorem Ipsum, y más recientemente con software de autoedición, como por ejemplo Aldus PageMaker, el cual incluye versiones de Lorem Ipsum.`,
         "icon" :"bxs-wrench",
-        "by":"Manuel Medrano"
+        "by":"Manuel Medrano",
+        "date": "19/12/2021",
+        "location": "Bello, Antioquia",
+        "employerScore": "5.0",
+        "employer": "Manuel Medrano",
+        "salary": "50.000",
     },
     {
+        "id": 2,
         "title": "Paseador de perros",
         "description": "Necesito joven con amor a los animales para cuidar mis mascotas.",
         "icon": "bxs-face",
-        "by":"Camilo Zapata"
+        "by":"Camilo Zapata",
+        "date": "20/11/2021",
+        "location": "Envigado, Antioquia",
+        "employerScore": "5.0",
+        "employer": "Manuel Medrano",
+        "salary": "90.000",
     },
     {
+        "id": 3,
         "title": "Fisioterapeuta",
         "description": "Necesito un fisioterapeuta o estudiante para que me ayude a recuperarme.",
         "icon": "bx bx-body",
-        "by":"Mariana Rodriguez"
+        "by":"Mariana Rodriguez",
+        "date": "01/12/2021",
+        "location": "Caldas, Antioquia",
+        "employerScore": "5.0",
+        "employer": "Manuel Medrano",
+        "salary": "58.000",
     },
     {
+        "id": 4,
         "title": "Aseadora",
         "description": "Alguna mujer para hacer aseo en mi casa el dia a 65.000 pesos.",
         "icon": "bx bxs-home-heart",
-        "by":"Daniela Martinez"
+        "by":"Daniela Martinez",
+        "date": "02/01/2022",
+        "location": "Sabaneta, Antioquia",
+        "employerScore": "5.0",
+        "employer": "Manuel Medrano",
+        "salary": "65.000",
     },
     {
+        "id": 5,
         "title": "Plomero",
         "description": "Necesito un plomero para arreglar unas tuberias en mi casa.",
         "icon" :"bxs-wrench",
-        "by":"Juan Zambrano"
+        "by":"Juan Zambrano",
+        "date": "17/11/2021",
+        "location": "Medellin, Antioquia",
+        "employerScore": "5.0",
+        "employer": "Manuel Medrano",
+        "salary": "23.000",
     }
 ];
-const JobList = () => {
+const JobList = (props) => {
+
+  const { jobSelected, modalType, setOpenModal } = props;
+
+  const openModal = (e) => {
+    modalType("job");
+    let job;
+    list.forEach(element => {
+      if (element.id === e) {
+        job = element;
+        return;
+      }
+    });
+    jobSelected(job);
+    setOpenModal(true);
+  }
 
     return (
         <div>
@@ -57,7 +102,7 @@ const JobList = () => {
                                   <div className="descriptionJobList">
                                     <div className="descriptionTitle">Descripción:</div>
                                     <p>
-                                      {job.description}
+                                      {(job.description).substr(0,230)}...
                                     </p>
                                     <div className="divItemsJobList">
                                       <i className='bx bxs-location-plus'></i>
@@ -65,11 +110,11 @@ const JobList = () => {
                                     </div>
                                     <div className="divItemsJobList">
                                       <i className='bx bxs-calendar'></i>
-                                        Fecha para trabajar: 2021-10-23
+                                        Fecha para trabajar: {job.date}
                                     </div>
                                     <div className="divItemsJobList">
                                        <i className='bx bx-dollar'></i>
-                                        32.000 COP X Hora
+                                        {job.salary} COP X Hora
                                     </div>
           
                                     <small>{job.postedDate}</small>
@@ -78,7 +123,7 @@ const JobList = () => {
                                 </div>
                               </div>
                               <div className="divBtnJobList">
-                                <button className="seeMoreInfoCardJob"  >Ver mas información</button>
+                                <button className="seeMoreInfoCardJob"  onClick={()=>{openModal(job.id)}} >Ver mas información</button>
                               </div>
           
                             </div>

@@ -1,79 +1,155 @@
-.goThereModal{
-    background: #007dc0 !important;
-    border-color: white !important;
-    color: white !important;
-    border-radius: 6px !important;
+.goThereModal {
+  background: #007dc0 !important;
+  border-color: white !important;
+  color: white !important;
+  border-radius: 6px !important;
 }
 
+.p-dialog-title {
+  color: #007dc0;
+}
 
 /* .goThereModal:hover{
     background: white;
     color: #007dc0;
 } */
 
-
-.closeModalButton{
-    background: white;
-    border-color: #727272;
-    color: #727272;
-    border-radius: 6px;
+.closeModalButton {
+  background: white;
+  border-color: #727272;
+  color: #727272;
+  border-radius: 6px;
 }
 
-.closeModalButton:hover{
-    background: #727272;
-    color: white;
+.divInfoModalJob .bxs-calendar {
+  font-size: 20px;
+  position: relative;
+  top: 2px;
+  color: #007dc0;
+  padding-right: 6px;
 }
 
-.modal-content{
-    border-color: #007dc0 !important;
+.divItemsCardJob{
+    margin-bottom: 5px;
 }
 
-.modal-header{
-    border-bottom: 1px solid #007dc0 !important;
-}
-
-.descriptionModalJob{
-   text-align: justify;
-}
-
-.descriptionJobTitle{
+.divInfoModalJob .bxs-star{
+    font-size: 20px;
+    position: relative;
+    top: 2px;
     color: #007dc0;
-    font-weight: bold;
-    margin-bottom: 1px;
-    margin-top: 1px;
+    padding-right: 6px;
 }
 
-.btnSeeEmployerProfileM{
+
+.btnEmployerNameModalInfo{
     border-radius: 6px;
-    border-color: #007dc0;
-    background: white;
-    color: #007dc0;
-    width: 100px;
-    height: 27px;
-    margin-left: 10px;
-    padding-top: 0px;
-    padding-bottom: 0px;
+    background: rgba(212, 9, 9, 0) !important;
+    border-color: transparent !important;
 }
 
-.btnSeeEmployerProfileM:hover{
-    color: white;
-    background: #007dc0;
-
+.btnEmployerNameModalInfo:hover{
+    background: #007dc01e !important;   
 }
 
+.ui-tooltip .ui-tooltip-text {
+    width: 300px; 
+ }
+
+.btnEmployerNameModalInfo .p-button-label{
+    color: rgb(0, 0, 0) !important;
+}
+
+
+/* .employerContentmodal{
+    border-radius: 6px;
+    cursor: pointer;
+    margin-left: 3px;
+}
+
+.employerContentmodal:hover{
+    background: #007dc05b;
+} */
+
+.divInfoModalJob .bx-dollar {
+  font-size: 20px;
+  position: relative;
+  top: 2px;
+  color: #007dc0;
+  padding-right: 6px;
+}
+
+.divInfoModalJob .bxs-location-plus {
+  font-size: 20px;
+  position: relative;
+  top: 2px;
+  color: #007dc0;
+  padding-right: 6px;
+}
+
+.divInfoModalJob .bx-user {
+  font-size: 20px;
+  position: relative;
+  top: 2px;
+  color: #007dc0;
+  padding-right: 6px;
+}
+
+.closeModalButton:hover {
+  background: #727272;
+  color: white;
+}
+
+.modal-content {
+  border-color: #007dc0 !important;
+}
+
+.modal-header {
+  border-bottom: 1px solid #007dc0 !important;
+}
+
+.descriptionModalJob {
+  text-align: justify;
+  font-size: 14px;
+}
+
+.descriptionJobTitle {
+  color: #000000;
+  font-weight: bold;
+  margin-bottom: 1px;
+  margin-top: 1px;
+  font-size: 14px;
+}
+
+.btnSeeEmployerProfileM {
+  border-radius: 6px;
+  border-color: #007dc0;
+  background: white;
+  color: #007dc0;
+  width: 100px;
+  height: 27px;
+  margin-left: 10px;
+  padding-top: 0px;
+  padding-bottom: 0px;
+}
+
+.btnSeeEmployerProfileM:hover {
+  color: white;
+  background: #007dc0;
+}
 
 /* DialogDemo.css */
 
 .dialog-demo .p-button {
-    margin: 0 .5rem 0 0;
-    min-width: 10rem;
+  margin: 0 0.5rem 0 0;
+  min-width: 10rem;
 }
 
 .dialog-demo p {
-    margin: 0;
-    line-height: 1.5;
+  margin: 0;
+  line-height: 1.5;
 }
 
 .dialog-demo .p-dialog .p-button {
-    min-width: 6rem;
+  min-width: 6rem;
 }

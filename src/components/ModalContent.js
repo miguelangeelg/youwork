@@ -7,7 +7,8 @@ import React from 'react';
 // import img5 from '../assets/img/modal/jobModal5.svg';
 // import img6 from '../assets/img/modal/jobModal6.svg';
 // import $ from 'jquery';
-
+// import { Tooltip } from 'primereact/tooltip';
+import { Button } from 'primereact/button';
 import './style/modalContent.css';
 const ModalContent = (props) => {
 
@@ -29,15 +30,28 @@ const ModalContent = (props) => {
                         </p>
                         <div className="row">
                             <div className="col divInfoModalJob">
-                                <p className="descriptionJobTitle">Fecha:</p> <span> {data.date}:</span>
-                                <p className="descriptionJobTitle">Salario:</p> <span> {data.salary}:</span>
-                                <p className="descriptionJobTitle">Locación:</p> <span> {data.location}:</span>
-                                <p className="descriptionJobTitle">Publicador:</p>
-                                <div className="row" style={{ paddingLeft: 12 }}>
-                                    {data.employer}
-                                    <button className=" btn  btnSeeEmployerProfileM">Ver Perfil</button>
+                                <div className="divItemsCardJob">
+                                    <i className='bx bxs-location-plus'></i>
+                                    {data.location}
                                 </div>
-                                <p style={{ marginTop: 20 }} className="descriptionJobTitle">Calificación del publicador:</p> <span> {data.employerScore}</span>
+                                <div className="divItemsCardJob">
+                                    <i className='bx bxs-calendar'></i>
+                                    Fecha para trabajar: {data.date}
+                                </div>
+                                <div className="divItemsCardJob">
+                                    <i className='bx bx-dollar'></i>
+                                    {data.salary} X Hora
+                                </div>
+                                <div className="divItemsCardJob">
+                                    <i className='bx bx-user'></i>
+                                    Publicador: <Button className="btnEmployerNameModalInfo" tooltip="Ver perfil" style={{height:20, fontSize:13, width:"auto"}} label={data.employer} />
+                                    {/* <span className="employerContentmodal"> {data.employer} </span> */}
+                                    {/* <button className=" btn  btnSeeEmployerProfileM">Ver Perfil</button> */}
+                                </div>
+                                <div className="divItemsCardJob">
+                                    <i className='bx bxs-star'></i>
+                                     Calificación: {data.employerScore}
+                                </div>
                             </div>
                         </div>
 

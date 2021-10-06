@@ -81,7 +81,7 @@ const Home = () => {
                     </h4>
                     <hr />
                 </div>
-                <JobList />
+                <JobList jobSelected={setInfoModal} modalType={setModalType} setOpenModal={setOpenModal}/>
             </div>
         </div>
     )
