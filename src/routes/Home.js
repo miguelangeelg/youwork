@@ -57,26 +57,26 @@ const Home = () => {
             </div>
             <div className="corouseldiv row p-3">
                 <div className="titleBetterJobs ">
-                    <h4 className="d-flex justify-content-start">Trabajos recomendados
+                    <h4 className="d-flex justify-content-start colorTextTheme">Trabajos recomendados
                         <i className='bx bxs-star'></i>
-                    </h4> <small>Deliza hacia la izquierda para ver mas... </small>
+                    </h4> <small className="colorTextTheme">Deliza hacia la izquierda para ver mas... </small>
                     <hr />
                 </div>
                 <CorouselCards jobSelected={setInfoModal} modalType={setModalType} setOpenModal={setOpenModal} />
             </div>
             <div className="corouseldiv row p-3">
                 <div className="titleBetterJobs ">
-                    <h4 className="d-flex justify-content-start">Personas recomendadas
+                    <h4 className="d-flex justify-content-start colorTextTheme">Personas recomendadas
                         <i className='bx bxs-star'></i>
                     </h4>
-                    <small>Deliza hacia la izquierda para ver mas... </small>
+                    <small className="colorTextTheme">Deliza hacia la izquierda para ver mas... </small>
                     <hr />
                 </div>
                 <CorouselCardsPerson userSelected={setInfoModal} modalType={setModalType} setOpenModal={setOpenModal}/>
             </div>
             <div className="corouseldiv row p-3">
                 <div className="titleBetterJobs ">
-                    <h4 className="d-flex justify-content-start">Mas Empleos...
+                    <h4 className="d-flex justify-content-start colorTextTheme">Mas Empleos...
                         <i className='bx bxs-star'></i>
                     </h4>
                     <hr />

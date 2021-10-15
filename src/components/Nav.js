@@ -7,7 +7,7 @@ import youWorkImg from '../assets/img/YourWork.png';
 const Nav = (props) =>{
         return (
             <div>
-                <div className="sidebar active">
+                <div className="componentTheme sidebar active">
                     <div className="logo-details">
                         {/* <i className='bx bxl-c-plus-plus icon'></i> */}
                         <div className="logo_name" onClick={goToHome} >You Work</div>
@@ -24,7 +24,7 @@ const Nav = (props) =>{
                             <span className="tooltip">Buscar</span>
                         </li> */}
                         <li>
-                            <a href="/searchJob">
+                            <a href="/searchJob" className="iconGray">
                                 <i className='bx bx-world'></i>
                                 <span className="links_name">Buscar Empleo</span>
                             </a>

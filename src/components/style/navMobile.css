@@ -29,7 +29,7 @@
 }
 
 .p-autocomplete{
-    display: inline;
+    display: inline !important;
 }
 
 .btnSearchMobile:hover{

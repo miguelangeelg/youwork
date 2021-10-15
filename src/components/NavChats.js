@@ -46,7 +46,7 @@ const Nav = () => {
 
     return (
         <div className="navChats">
-            <div className="sidebar2 active">
+            <div className="sidebar2 active componentTheme">
                 <ul className="nav-list">
                     <li>
                         <a href="/#">

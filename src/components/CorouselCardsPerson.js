@@ -106,7 +106,7 @@ const CorouselCardsPerson = (props) => {
                 }}
                 breakpoints={{
                     // when window width is >= 640px
-                    1180: {
+                    1391: {
                         slidesPerView: 3
                     },
                     700: {
@@ -127,8 +127,8 @@ const CorouselCardsPerson = (props) => {
                         <img  src={person[1].photo} alt="barbarian" />
                     </div>
                     <div className="clash-card__level clash-card__level--barbarian"> {person[1].dedication}</div>
-                    <div className="clash-card__unit-name">{person[1].name}</div>
-                    <div className="clash-card__unit-description">
+                    <div className="clash-card__unit-name colorTextTheme">{person[1].name}</div>
+                    <div className="clash-card__unit-description colorTextTheme">
                         {person[1].description}
                     </div>
                     <div className="divBtnPersonCard">

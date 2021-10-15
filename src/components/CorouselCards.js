@@ -102,7 +102,7 @@ const CorouselCards = (props) => {
         }}
         breakpoints={{
           // when window width is >= 640px
-          1180: {
+          1391: {
             slidesPerView: 3
           },
           700: {
@@ -120,7 +120,7 @@ const CorouselCards = (props) => {
           jobs.map((job) => {
             return (
               <SwiperSlide className="betterJobs" key={job[1].id} >
-                <div className="cardBetterJob">
+                <div className="cardBetterJob componentTheme">
                   <div className="grid" style={{ height: "100%" }}>
                     <div className="row">
                       <div className="col">
@@ -132,19 +132,19 @@ const CorouselCards = (props) => {
                     <div className="row">
                       <div className="col">
                         <div className="description">
-                          <div className="descriptionTitle">Descripción:</div>
-                          <p>
+                          <div className="descriptionTitle colorTextTheme">Descripción:</div>
+                          <p className="colorTextTheme">
                             {job[1].description}
                           </p>
-                          <div className="divItemsCardJob">
+                          <div className="divItemsCardJob colorTextTheme">
                             <i className='bx bxs-location-plus'></i>
                             Medellín
                           </div>
-                          <div className="divItemsCardJob">
+                          <div className="divItemsCardJob colorTextTheme">
                             <i className='bx bxs-calendar'></i>
                               Fecha para trabajar: 2021-10-23
                           </div>
-                          <div className="divItemsCardJob">
+                          <div className="divItemsCardJob colorTextTheme">
                              <i className='bx bx-dollar'></i>
                               32.000 COP X Hora
                           </div>

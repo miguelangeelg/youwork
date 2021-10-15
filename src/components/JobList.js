@@ -1,7 +1,5 @@
-import React from 'react';
+import React, {useState, useEffect} from 'react';
 import './style/jobList.css';
-
-
 
 const list = [
     {
@@ -66,8 +64,26 @@ const list = [
     }
 ];
 const JobList = (props) => {
-
+  
   const { jobSelected, modalType, setOpenModal } = props;
+  const [limitDescription, setLimitDescription] = useState(230)
+  useEffect(() => {
+
+    if (window.innerWidth <= 817) {
+      setLimitDescription(100);
+    } else {
+      setLimitDescription(230);
+    }
+
+    window.onresize = function() {
+      if (window.innerWidth <= 817) {
+        setLimitDescription(100);
+      } else {
+        setLimitDescription(230);
+      }
+
+    }
+  }, [])
 
   const openModal = (e) => {
     modalType("job");
@@ -93,26 +109,26 @@ const JobList = (props) => {
                               <div className="row">
                                 <div className="col">
                                   <div className="titleJobList" >
-                                    <p className="titleText">{job.title}</p>
+                                    <p className="titleText ">{job.title}</p>
                                   </div>
                                 </div>
                               </div>
                               <div className="row">
                                 <div className="col">
                                   <div className="descriptionJobList">
-                                    <div className="descriptionTitle">Descripción:</div>
-                                    <p>
-                                      {(job.description).substr(0,230)}...
+                                    <div className="descriptionTitle colorTextTheme">Descripción:</div>
+                                    <p className="colorTextTheme">
+                                      {(job.description).substr(0,limitDescription)}...
                                     </p>
-                                    <div className="divItemsJobList">
+                                    <div className="divItemsJobList colorTextTheme">
                                       <i className='bx bxs-location-plus'></i>
                                       Medellín
                                     </div>
-                                    <div className="divItemsJobList">
+                                    <div className="divItemsJobList colorTextTheme">
                                       <i className='bx bxs-calendar'></i>
                                         Fecha para trabajar: {job.date}
                                     </div>
-                                    <div className="divItemsJobList">
+                                    <div className="divItemsJobList colorTextTheme">
                                        <i className='bx bx-dollar'></i>
                                         {job.salary} COP X Hora
                                     </div>

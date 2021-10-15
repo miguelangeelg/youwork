@@ -1,14 +1,16 @@
 import React, {useState} from 'react';
 import { AutoComplete } from 'primereact/autocomplete';
 import './style/navTop.css';
+import {InputSwitch} from 'primereact/inputswitch';
+
 
 import userThree from '../assets/img/users/meProfile';
 
-const NavTop = () => {
+const NavTop = (props) => {
 
+    const { setTheme} = props;
     const [filteredJobs, setFilteredJobs] = useState(null);
     const [selectedJob1, setSelectedJob1] = useState(null);
-
 
     const jobs = [
         {"name":"Aseadora"}, {"name":"Desarrollador"}, {"name":"Conductor"}, {"name":"Archivista"}
@@ -34,7 +36,7 @@ const NavTop = () => {
 
     return (
         <div className="containerNavbarTop">
-            <nav className="navbar-expand-lg  p-2" style={{zIndex:4}}>
+            <nav className="navbar-expand-lg  p-2 componentTheme" style={{zIndex:4}}>
                 <div className="row">
                     <div className="col-2">
                         <form className="d-flex d-flex justify-content-start">
@@ -55,6 +57,12 @@ const NavTop = () => {
                     <div className="col-10 contentNav">
                         <div className="collapse navbar-collapse float-right d-flex justify-content-end" id="navbarNav">
                             <ul className="navbar-nav">
+                            <li className="nav-item colorTextTheme" style={{display:"flex",alignItems:"center"}}>
+                                    <p style={{margin:0, marginRight:10}}>Modo Oscuro</p>
+                                    <InputSwitch
+                                    //  checked={theme}
+                                      onChange={(e) => setTheme()} />
+                                </li>
                                 <li className="nav-item">
                                     <span className="tooltipProfile">Notificaciones</span>
                                     <i className='bx bxs-bell'></i>
@@ -67,7 +75,7 @@ const NavTop = () => {
                                     <span className="tooltipProfile">Ver Perfil</span>
                                     <img alt="some" className="userAvatar" src={userThree} />
                                 </li>
-                                <li className="nav-item" style={{display:"flex",alignItems:"center"}}>
+                                <li className="nav-item colorTextTheme" style={{display:"flex",alignItems:"center"}}>
                                     <p style={{margin:0}}>Miguel Angel Gutiérrez</p>
                                 </li>
                             </ul>

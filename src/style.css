@@ -18,7 +18,7 @@ body{
 }
 
 
-@media (max-width: 1060px) {
+@media (max-width: 990px) {
     .desktopStyle{
        display: none;
        visibility: hidden;
@@ -34,10 +34,13 @@ body{
     }
     
   }
-  @media (min-width: 1061px) {
+  @media (min-width: 991px) {
     .mobileStyle{
         visibility: hidden;
     }
     
   }
 
+  #modalCustom{
+      background: red;
+  }
