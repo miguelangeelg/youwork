@@ -1,35 +1,47 @@
-import {createGlobalStyle} from 'styled-components'
+import { createGlobalStyle } from 'styled-components'
 export const lightTheme = {
     body: "#f9fafe",
     fontColorNormal: "black",
-    fontColorCorporative : "#227ec0",
+    fontColorCorporative: "#227ec0",
     componetsColor: "#fefefe",
     colorFontLeftBar: "#757575",
     colorInputText: "black",
-    bordersColor : "#b9b9b9",
+    bordersColor: "#b9b9b9",
     iconGray: "#757575",
-    textGray : "#757575",
+    textGray: "#757575",
     inputTextTheme: "#f9fafe",
-    inputTextThemeBorderColor : "##ced4da"
+    inputTextThemeBorderColor: "##ced4da"
 }
 
 export const darkTheme = {
     body: "#19232a",
     fontColorNormal: "white",
-    fontColorCorporative : "#227ec0",
+    fontColorCorporative: "#227ec0",
     componentsColor: "#0f1112",
     colorFontLeftBar: "#757575",
     colorInputText: "white",
-    bordersColor : "#000000",
+    bordersColor: "#000000",
     iconGray: "white",
-    textGray : "white",
+    textGray: "white",
     inputTextTheme: "#19232a",
-    inputTextThemeBorderColor : "#19232a"
+    inputTextThemeBorderColor: "#19232a"
 
     //#0f1112
 }
 
 export const GlobalStyles = createGlobalStyle`
+
+.p-dialog-header{
+    background-color: ${props => props.theme.componentsColor} !important;
+}
+
+.p-dialog-content{
+    background-color: ${props => props.theme.componentsColor} !important;
+}
+
+.p-dialog-footer{
+    background-color: ${props => props.theme.componentsColor} !important;
+}
     body {
         background-color: ${props => props.theme.body}
     }
@@ -69,6 +81,25 @@ export const GlobalStyles = createGlobalStyle`
         color: ${props => props.theme.fontColorNormal} !important;
     }
 
+    .descriptionJobTitle{
+        color: ${props => props.theme.fontColorNormal} !important;
+    }
+
+    .descriptionModalJob{
+        color: ${props => props.theme.fontColorNormal} !important;
+    }
+
+    .divItemsCardJob{
+        color: ${props => props.theme.fontColorNormal} !important;
+    }
+
+    .workingThis{
+        color: ${props => props.theme.fontColorNormal} !important;
+    }
+
+    .p-button-label.p-c{
+        color: ${props => props.theme.fontColorNormal} !important;
+    }
     #navbarNav i{
         color: ${props => props.theme.iconGray} !important;
     }

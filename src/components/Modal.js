@@ -43,7 +43,7 @@ const Modal = (props) => {
 
     return (
 
-        <Dialog header={title} id="modalCustom" visible={displayBasic2} style={{ width: 480, borderRadius:6 }} footer={renderFooter()} onHide={() => onHide()}>
+        <Dialog header={title} id="modalCustom" styleClass="modalPopUp" visible={displayBasic2} style={{ width: 480, borderRadius:6 }} footer={renderFooter()} onHide={() => onHide()}>
             {children}
         </Dialog>
     )

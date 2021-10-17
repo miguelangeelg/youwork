@@ -57,7 +57,7 @@ const ModalContent = (props) => {
 
                     </div>
                 ) : (
-                    <h5>Working in this...</h5>
+                    <h5 className="workingThis">Working in this...</h5>
                 )
             }
         </div>
