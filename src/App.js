@@ -21,7 +21,7 @@ function App() {
 
 
   useEffect(() => {
-    if (sessionStorage.getItem("theme") === "dark") {
+    if (localStorage.getItem("theme") === "dark") {
       setTheme("dark");
     } else {
       setTheme("light");
@@ -31,10 +31,10 @@ function App() {
   const themeToggle = () => {
     if (theme === "light") {
       setTheme("dark");
-      sessionStorage.setItem("theme", "dark");
+      localStorage.setItem("theme", "dark");
     } else {
       setTheme("light");
-      sessionStorage.setItem("theme", "light");
+      localStorage.setItem("theme", "light");
     }
   }
 
