@@ -1,68 +1,100 @@
-.titleMobile{
-    color: #007dc0 !important;
-    font-size: 30px;
+#switchMobile {
+  display: none;
 }
 
-.inputSearchJobMobile{
-    border-radius: 6px;
-    width: 50%;
-    margin-right: 10px !important;
-      
+.contentSwitchMobile {
+  height: 31px;
+  width: 63px;
+  background-color: #c7d3d3;
+  /* display: flex; */
+  align-items: center;
+  border-radius: 50px;
+  cursor: pointer;
+  position: relative;
+  margin-left: 10px;
+  top: 9px;
 }
 
-#pr_id_2{
-    display:  initial !important;
+.circleMobile {
+  height: 31px;
+  width: 31px;
+  margin-left: 0px;
+  background-color: #f5f5f5;
+  border-radius: 50%;
+  box-shadow: 0 2px 2px rgba(0, 0, 0, 0.3);
+  transition: 0.3s;
+}
+
+#switchMobile:checked + label {
+  background-color: #19232a;
+}
+/* #19232a */
+#switchMobile:checked + label .circleMobile {
+  transform: translateX(32px);
+}
+
+.titleMobile {
+  color: #007dc0 !important;
+  font-size: 30px;
+}
+
+.inputSearchJobMobile {
+  border-radius: 6px;
+  width: 50%;
+  margin-right: 10px !important;
+}
+
+#pr_id_2 {
+  display: initial !important;
 }
 
 .form-control:focus {
-        border-color: #007dc0 !important;
-    outline: 0 !important; 
-    box-shadow: none !important;
+  border-color: #007dc0 !important;
+  outline: 0 !important;
+  box-shadow: none !important;
 }
 
-.btnSearchMobile{
-    border-radius: 6px;
-    color: #007dc0;
-    border-color: #007dc0;
-    position: relative;
-    bottom: 3px;
+.btnSearchMobile {
+  border-radius: 6px;
+  color: #007dc0;
+  border-color: #007dc0;
+  position: relative;
+  bottom: 3px;
 }
 
-.p-autocomplete{
-    display: inline !important;
+.p-autocomplete {
+  display: inline !important;
 }
 
-.btnSearchMobile:hover{
-    color: #ffffff;
-    background: #007dc0;
-    border-color: #007dc0;
+.btnSearchMobile:hover {
+  color: #ffffff;
+  background: #007dc0;
+  border-color: #007dc0;
 }
 
-.navMobile li:hover a{
-    color: #007dc0 !important;
+.navMobile li:hover a {
+  color: #007dc0 !important;
 }
 
-.navMobile .container-fluid{
-    background: rgb(255, 255, 255);
+.navMobile .container-fluid {
+  background: rgb(255, 255, 255);
 }
 
 .navMobile li i {
-    height: 50px;
-    min-width: 50px;
-    border-radius: 6px;
-    text-align: center;
-    font-size: 22px;
-    position: relative;
-    top: 13px;
-    color: #a5a5a5;
-  }
+  height: 50px;
+  min-width: 50px;
+  border-radius: 6px;
+  text-align: center;
+  font-size: 22px;
+  position: relative;
+  top: 13px;
+  color: #a5a5a5;
+}
 
-  .navMobile li a {
-        color: #757575;
-        align-items: center;
-        text-decoration: none;
-        transition: all 0.4s ease;
-        border-radius: 6px;
-      
-  }
-
+.navMobile li a {
+  color: #757575;
+  align-items: center;
+  text-decoration: none;
+  transition: all 0.4s ease;
+  border-radius: 6px;
+}

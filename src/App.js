@@ -8,19 +8,35 @@ import { BrowserRouter as Router, Route } from 'react-router-dom'
 import 'primereact/resources/themes/saga-blue/theme.css'
 import 'primereact/resources/primereact.min.css'
 import 'primeicons/primeicons.css'
-import { useState } from 'react';
-import {GlobalStyles ,lightTheme, darkTheme } from './Theme';
+import { useState, useEffect } from 'react';
+import { GlobalStyles, lightTheme, darkTheme } from './Theme';
 import styled, { ThemeProvider } from 'styled-components';
 import './style.css'
+
+const StyledApp = styled.div``;
+
 function App() {
 
   const [theme, setTheme] = useState("light");
 
-  const themeToggle = () => {
-    theme === "light" ? setTheme("dark") : setTheme("light");
-  }
 
-  const StyledApp = styled.div``;
+  useEffect(() => {
+    if (sessionStorage.getItem("theme") === "dark") {
+      setTheme("dark");
+    } else {
+      setTheme("light");
+    }
+  }, [])
+
+  const themeToggle = () => {
+    if (theme === "light") {
+      setTheme("dark");
+      sessionStorage.setItem("theme", "dark");
+    } else {
+      setTheme("light");
+      sessionStorage.setItem("theme", "light");
+    }
+  }
 
   const btnActive = () => {
     let sidebar = document.querySelector(".sidebar");
@@ -36,7 +52,7 @@ function App() {
 
   return (
     <ThemeProvider theme={theme === "light" ? lightTheme : darkTheme}>
-      <GlobalStyles/>
+      <GlobalStyles />
       <StyledApp>
         <Router>
           <div className='container-fluid'>
@@ -47,10 +63,10 @@ function App() {
               <div className='col-8 content'>
                 <div className='row'>
                   <div className='col desktopStyle'>
-                    <NavTop setTheme={themeToggle} />
+                    <NavTop theme={theme} setTheme={themeToggle} />
                   </div>
                   <div className="col mobileStyle">
-                    <NavMobile setTheme={themeToggle} />
+                    <NavMobile theme={theme} setTheme={themeToggle} />
 
                   </div>
                 </div>
@@ -72,5 +88,6 @@ function App() {
     </ThemeProvider>
   )
 }
+
 
 export default App

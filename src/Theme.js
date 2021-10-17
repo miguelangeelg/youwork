@@ -9,7 +9,8 @@ export const lightTheme = {
     bordersColor : "#b9b9b9",
     iconGray: "#757575",
     textGray : "#757575",
-    inputTextTheme: "white"
+    inputTextTheme: "#f9fafe",
+    inputTextThemeBorderColor : "##ced4da"
 }
 
 export const darkTheme = {
@@ -19,10 +20,11 @@ export const darkTheme = {
     componentsColor: "#0f1112",
     colorFontLeftBar: "#757575",
     colorInputText: "white",
-    bordersColor : "black",
+    bordersColor : "#000000",
     iconGray: "white",
     textGray : "white",
-    inputTextTheme: "#19232a"
+    inputTextTheme: "#19232a",
+    inputTextThemeBorderColor : "#19232a"
 
     //#0f1112
 }
@@ -34,7 +36,7 @@ export const GlobalStyles = createGlobalStyle`
 
     .componentTheme{
         background-color: ${props => props.theme.componentsColor} !important;
-        border-right: 1 solid ${props => props.theme.bordersColor} !important;
+        border-right: 1px solid ${props => props.theme.bordersColor} !important;
     }
 
     .menuNavMobileTheme{
@@ -52,7 +54,7 @@ export const GlobalStyles = createGlobalStyle`
     }
 
     .sidebar2{
-        border-left: 1 solid ${props => props.theme.bordersColor} !important;
+        border-left: 1px solid ${props => props.theme.bordersColor} !important;
     }
 
     .clash-card{

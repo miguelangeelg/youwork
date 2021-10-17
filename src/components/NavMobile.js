@@ -1,22 +1,21 @@
-import React, {useState} from 'react';
+import React, { useState } from 'react';
 import { AutoComplete } from 'primereact/autocomplete';
 import './style/navMobile.css';
-import {InputSwitch} from 'primereact/inputswitch';
 
 
 const NavMobile = (props) => {
-    const {setTheme} = props;
+    const { setTheme, theme } = props;
     const [filteredJobs, setFilteredJobs] = useState(null);
     const [selectedJob1, setSelectedJob1] = useState(null);
 
 
     const jobs = [
-        {"name":"Aseadora"}, {"name":"Desarrollador"}, {"name":"Conductor"}, {"name":"Archivista"}
+        { "name": "Aseadora" }, { "name": "Desarrollador" }, { "name": "Conductor" }, { "name": "Archivista" }
     ];
 
     const searchJob = (event) => {
 
-     
+
         setTimeout(() => {
             let _filteredJobs;
             if (!event.query.trim().length) {
@@ -39,7 +38,7 @@ const NavMobile = (props) => {
                 <div className="container-fluid">
                     <a className="navbar-brand titleMobile" href="/#">You Work</a>
                     <button className="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-                        <i className='bx bx-menu menuNavMobileTheme' style={{fontSize:35, paddingBottom:10}}></i>
+                        <i className='bx bx-menu menuNavMobileTheme' style={{ fontSize: 35, paddingBottom: 10 }}></i>
                     </button>
                     <div className="collapse navbar-collapse" id="navbarSupportedContent">
                         <ul className="navbar-nav me-auto mb-2 mb-lg-0">
@@ -70,14 +69,15 @@ const NavMobile = (props) => {
                             <li className="nav-item">
                                 <a className="nav-link colorTextTheme" href="/#">Planes Premium</a>
                             </li>
-                            <li className="nav-item colorTextTheme" style={{height:41}}>
-                                 Modo Oscuro
-                                    <InputSwitch
-                                    style={{top: 8,marginLeft: 10}}
-                                    //  checked={theme}
-                                      onChange={(e) => setTheme()} />  
+                            <li className="nav-item colorTextTheme" style={{ height: 41 }}>
+                                Modo Oscuro
+                                <input id="switchMobile" checked={theme === "dark" ? true : false} type="checkbox" onChange={(e) => setTheme()} />
+                                <label className="contentSwitchMobile" htmlFor="switch">
+                                    <div className="circleMobile">
+                                    </div>
+                                </label>
                             </li>
-                           
+
 
                             {/* <li className="nav-item dropdown">
                                 <a className="nav-link dropdown-toggle" href="/#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
@@ -96,13 +96,13 @@ const NavMobile = (props) => {
                         </ul>
                         <form className="">
                             <AutoComplete
-                            inputClassName="inputSearchJobMobile"
-                            value={selectedJob1}
-                            suggestions={filteredJobs}
-                            completeMethod={searchJob}
-                            field="name"
-                            placeholder="Buscar Trabajo"
-                            onChange={(e) => setSelectedJob1(e.value)}
+                                inputClassName="inputSearchJobMobile"
+                                value={selectedJob1}
+                                suggestions={filteredJobs}
+                                completeMethod={searchJob}
+                                field="name"
+                                placeholder="Buscar Trabajo"
+                                onChange={(e) => setSelectedJob1(e.value)}
                             />
                             <button className="btn btn-outline-danger btnSearchMobile" type="submit">Buscar</button>
                         </form>
