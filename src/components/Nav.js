@@ -29,7 +29,7 @@ const Nav = (props) =>{
                             <span className="tooltip">Buscar</span>
                         </li> */}
                         <li style={{cursor:"pointer"}}>
-                            <a onClick={() => {goTo('/searchJob')}} className="iconGray">
+                            <a href="/" onClick={(e) => { e.preventDefault(); goTo('/searchJob')}} className="iconGray">
                                 <i className='bx bx-world'></i>
                                 <span className="links_name">Buscar Empleo</span>
                             </a>
