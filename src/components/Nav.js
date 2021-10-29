@@ -1,17 +1,22 @@
 import React from 'react';
 import './style/nav.css';
 import youWorkImg from '../assets/img/YourWork.png';
+import {useHistory } from 'react-router-dom'
+
 // import userOne from '../assets/img/users/user1.jpeg';
 // import userTwo from '../assets/img/users/user2.jpeg';
 // import userThree from '../assets/img/users/user3.png';
+
+
 const Nav = (props) =>{
+    const history = useHistory(); 
         return (
             <div>
                 <div className="componentTheme sidebar active">
                     <div className="logo-details">
                         {/* <i className='bx bxl-c-plus-plus icon'></i> */}
-                        <div className="logo_name" onClick={goToHome} >You Work</div>
-                        <i className='bx bx-menu' id="btn" onClick={props.btnActiveFunction} ></i>
+                        <div className="logo_name" onClick={()=>{goTo('/')}} >You Work</div>
+                        <i className='bx bx-menu' style={{fontSize: 35}} id="btn" onClick={props.btnActiveFunction} ></i>
                     </div>
                     <ul className="nav-list">
                         <li className="liHome">
@@ -23,8 +28,8 @@ const Nav = (props) =>{
                             <input type="text" placeholder="Buscar..." />
                             <span className="tooltip">Buscar</span>
                         </li> */}
-                        <li>
-                            <a href="/searchJob" className="iconGray">
+                        <li style={{cursor:"pointer"}}>
+                            <a onClick={() => {goTo('/searchJob')}} className="iconGray">
                                 <i className='bx bx-world'></i>
                                 <span className="links_name">Buscar Empleo</span>
                             </a>
@@ -64,7 +69,11 @@ const Nav = (props) =>{
 
                 </div>
             </div>
-        )
+        );
+
+        function goTo(to) {
+            history.push(to)
+        }
 
 }
 
@@ -75,9 +84,7 @@ const Nav = (props) =>{
 //     sidebar.classList.toggle("active");
 // }
 
-const goToHome = () => {
-    window.location.href = "/#";
-}
+
 
 
 
