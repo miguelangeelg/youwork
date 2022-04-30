@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { AutoComplete } from 'primereact/autocomplete';
-import './style/navMobile.css';
+import '../style/navMobile.css';
 
 
 const NavMobile = (props) => {

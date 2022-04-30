@@ -1,8 +1,8 @@
 import React, { useState } from 'react';
 import { AutoComplete } from 'primereact/autocomplete';
-import './style/navTop.css';
+import '../style/navTop.css';
 
-import userThree from '../assets/img/users/meProfile';
+import userThree from '../../assets/img/users/meProfile';
 
 const NavTop = (props) => {
 

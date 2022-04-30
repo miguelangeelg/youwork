@@ -1,10 +1,10 @@
 import React from 'react';
-import './style/navChats.css';
-import userOne from '../assets/img/users/user1.jpeg';
-import userTwo from '../assets/img/users/user2.jpeg';
-import userThree from '../assets/img/users/user3.png';
-import userFour from '../assets/img/users/user4.jpeg';
-import userFive from '../assets/img/users/user5.jpeg';
+import '../style/navChats.css';
+import userOne from '../../assets/img/users/user1.jpeg';
+import userTwo from '../../assets/img/users/user2.jpeg';
+import userThree from '../../assets/img/users/user3.png';
+import userFour from '../../assets/img/users/user4.jpeg';
+import userFive from '../../assets/img/users/user5.jpeg';
 
 
 const Nav = () => {

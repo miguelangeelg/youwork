@@ -1,6 +1,6 @@
 import React from 'react';
-import './style/nav.css';
-import youWorkImg from '../assets/img/YourWork.png';
+import '../style/nav.css';
+import youWorkImg from '../../assets/img/YourWork.png';
 import {useHistory } from 'react-router-dom'
 
 // import userOne from '../assets/img/users/user1.jpeg';
