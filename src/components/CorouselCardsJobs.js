@@ -70,7 +70,7 @@ let jobs = Object.entries({
   },
 });
 
-const CorouselCards = (props) => {
+const CorouselCardsJobs = (props) => {
   const { jobSelected, modalType, setOpenModal } = props;
 
   // useEffect(() => {
@@ -178,4 +178,4 @@ const CorouselCards = (props) => {
   );
 };
 
-export default CorouselCards;
+export default CorouselCardsJobs;

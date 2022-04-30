@@ -1,7 +1,7 @@
 import Nav from "./components/navs/Nav";
 import NavChats from "./components/navs/NavChats";
 import Home from "./pages/home/Home";
-import SearchJob from "./routes/SearchJob";
+import SearchJob from "./pages/searchJob/SearchJob";
 import NavTop from "./components/navs/NavTop";
 import NavMobile from "./components/navs/NavMobile";
 import { BrowserRouter as Router, Route } from "react-router-dom";

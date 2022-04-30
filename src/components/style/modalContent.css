@@ -1,0 +1,32 @@
+.profileImage {
+  height: 140px;
+  width: 140px;
+  border-radius: 100%;
+  padding-left: 5px;
+  margin-bottom: 5px;
+  margin-top: 20px;
+}
+
+.container-img-prifile-modal-content {
+  display: flex;
+  justify-content: center;
+}
+
+.description-modal-content{
+    padding-top: 20px;
+}
+
+.recomendedStar-modal-content>.bxs-star
+{
+    position: relative;
+    color: rgb(255, 221, 31);
+    font-size: 30px;
+    right: 56%;
+    bottom: 0px;
+}
+
+.p-scrollpanel-bar {
+    background-color: #007dc0 !important;
+    opacity: 1 !important;
+    transition: #007dc0 .2s !important;
+}

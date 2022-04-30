@@ -97,7 +97,7 @@ export const GlobalStyles = createGlobalStyle`
         color: ${props => props.theme.fontColorNormal} !important;
     }
 
-    .p-button-label.p-c{
+    .btnEmployerNameModalInfo{
         color: ${props => props.theme.fontColorNormal} !important;
     }
     #navbarNav i{

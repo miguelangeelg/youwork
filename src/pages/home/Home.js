@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import "./css/home.css";
-import CorouselCards from "../../components/CorouselCards";
+import CorouselCardsJobs from "../../components/CorouselCardsJobs";
 import JobList from "../../components/JobList";
 import CorouselCardsPerson from "../../components/CorouselCardsPerson";
 import Modal from "../../components/Modal";
@@ -29,7 +29,7 @@ const Home = () => {
         <CarouselHome />
       </div>
       <div className="corouseldiv row p-3">
-        <CorouselCards
+        <CorouselCardsJobs
           jobSelected={setInfoModal}
           modalType={setModalType}
           setOpenModal={setOpenModal}

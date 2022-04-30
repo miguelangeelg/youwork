@@ -40,3 +40,7 @@ body{
     }
     
   }
+
+  .boldText{
+   font-weight: bold;
+  }
