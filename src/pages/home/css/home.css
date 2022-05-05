@@ -106,8 +106,9 @@
   margin: 0px;
 }
 
-.titleBetterJobs h4 {
+.title h4 {
   position: relative;
+  margin-left: 8px !important;
 }
 
 h4 .bxs-star {

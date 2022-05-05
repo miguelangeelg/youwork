@@ -92,7 +92,7 @@ const CorouselCardsJobs = (props) => {
 
   return (
     <div className="containerCarousel">
-      <div className="titleBetterJobs ">
+      <div className="title ">
         <h4 className="d-flex justify-content-start colorTextTheme">
           Trabajos recomendados
           <i className="bx bxs-star"></i>

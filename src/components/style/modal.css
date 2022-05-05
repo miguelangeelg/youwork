@@ -8,8 +8,7 @@
 .goThereModal:active, 
 .goThereModal:focus 
 {
-    border:none!important; /* here configure as your needs */
-    color:transparent !important;
+    border:none!important;
  }
 
 .p-dialog-title {

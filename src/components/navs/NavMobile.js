@@ -58,19 +58,19 @@ const NavMobile = (props) => {
                                 <a className="nav-link colorTextTheme" href="/#">Notificaciones</a>
                             </li>
                             <li className="nav-item">
-                                <a className="nav-link colorTextTheme" onClick={() => {goTo('/searchJob')}} >Buscar Empleo</a>
+                                <a className="nav-link colorTextTheme" onClick={() => {goTo('/searchJob')}} >Buscar empleo</a>
                             </li>
                             <li className="nav-item">
-                                <a className="nav-link colorTextTheme" href="/#">Publicar Empleo</a>
+                                <a className="nav-link colorTextTheme" href="/#">Publicar empleo</a>
                             </li>
                             <li className="nav-item">
-                                <a className="nav-link colorTextTheme" href="/#">Buscar Empleado</a>
+                                <a className="nav-link colorTextTheme" href="/#">Buscar empleado</a>
                             </li>
                             <li className="nav-item">
                                 <a className="nav-link colorTextTheme" href="/#">Aplicaciones</a>
                             </li>
                             <li className="nav-item">
-                                <a className="nav-link colorTextTheme" href="/#">Planes Premium</a>
+                                <a className="nav-link colorTextTheme" href="/#">Planes premium</a>
                             </li>
                             <li className="nav-item colorTextTheme dar-mode-switch-nav-movile" style={{ height: 41 }}>
                                 Modo Oscuro

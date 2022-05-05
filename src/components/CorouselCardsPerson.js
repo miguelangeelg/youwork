@@ -101,7 +101,7 @@ const CorouselCardsPerson = (props) => {
 
   return (
     <div className="containerCarousel">
-      <div className="titleBetterJobs ">
+      <div className="title ">
         <h4 className="d-flex justify-content-start colorTextTheme">
           Personas recomendadas
           <i className="bx bxs-star"></i>
@@ -153,7 +153,7 @@ const CorouselCardsPerson = (props) => {
                         openModal(person[1].id);
                       }}
                     >
-                      Ver Perfil
+                      Ver perfil
                     </button>
                   </div>
                   <div className="clash-card__unit-stats clash-card__unit-stats--barbarian clearfix">
