@@ -184,6 +184,12 @@ ul {
   opacity: 1;
   pointer-events: auto;
 }
+
+.sidebar li a:hover .links_name{
+  transition: all 0.5s ease;
+  color: #ffffff !important;
+}
+
 .sidebar li a:hover .links_name,
 .sidebar li a:hover i {
   transition: all 0.5s ease;

@@ -20,7 +20,7 @@ const Nav = (props) =>{
                     </div>
                     <ul className="nav-list">
                         <li className="liHome">
-                            <img  className="youWorkImg" src={youWorkImg} alt="some" />
+                            <img  className="youWorkImg" onClick={()=>{goTo('/')}} src={youWorkImg} alt="some" />
                             <span className="tooltip">You Work Inicio</span>
                         </li>
                         {/* <li>

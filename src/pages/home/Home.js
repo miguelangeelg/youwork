@@ -45,8 +45,8 @@ const Home = () => {
       <div className="corouseldiv row p-3">
         <div className="titleBetterJobs ">
           <h4 className="d-flex justify-content-start colorTextTheme">
-            Mas Empleos...
-            <i className="bx bxs-star"></i>
+            Mas empleos...
+            {/* <i className="bx bxs-star"></i> */}
           </h4>
           <hr />
         </div>
