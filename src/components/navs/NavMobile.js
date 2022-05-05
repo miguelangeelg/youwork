@@ -1,9 +1,15 @@
 import React, { useState } from 'react';
-import { AutoComplete } from 'primereact/autocomplete';
+// import { AutoComplete } from 'primereact/autocomplete';
 import '../style/navMobile.css';
+import {print} from '../../library/utilities/tools'
+import {useHistory } from 'react-router-dom'
 
 
 const NavMobile = (props) => {
+
+    const history = useHistory(); 
+
+    print("Holaaaa")
     const { setTheme, theme } = props;
     const [filteredJobs, setFilteredJobs] = useState(null);
     const [selectedJob1, setSelectedJob1] = useState(null);
@@ -34,7 +40,7 @@ const NavMobile = (props) => {
 
     return (
         <div className="navMobile">
-            <nav className="navbar navbar-expand-lg navbar-light bg-light componentTheme">
+            <nav className="navbar navbar-expand-lg navbar-light bg-light bodyColor">
                 <div className="container-fluid">
                     <a className="navbar-brand titleMobile" href="/#">You Work</a>
                     <button className="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
@@ -43,7 +49,7 @@ const NavMobile = (props) => {
                     <div className="collapse navbar-collapse" id="navbarSupportedContent">
                         <ul className="navbar-nav me-auto mb-2 mb-lg-0">
                             <li className="nav-item">
-                                <a className="nav-link active colorTextTheme" aria-current="page" href="/#">Inicio</a>
+                                <a className="nav-link active colorTextTheme" aria-current="page" onClick={() => {goTo('/')}}>Inicio</a>
                             </li>
                             <li className="nav-item">
                                 <a className="nav-link colorTextTheme" href="/#">Mensajes</a>
@@ -52,10 +58,7 @@ const NavMobile = (props) => {
                                 <a className="nav-link colorTextTheme" href="/#">Notificaciones</a>
                             </li>
                             <li className="nav-item">
-
-                                <a className="nav-link colorTextTheme" href="/searchJob">Buscar Empleo</a>
-
-
+                                <a className="nav-link colorTextTheme" onClick={() => {goTo('/searchJob')}} >Buscar Empleo</a>
                             </li>
                             <li className="nav-item">
                                 <a className="nav-link colorTextTheme" href="/#">Publicar Empleo</a>
@@ -69,7 +72,7 @@ const NavMobile = (props) => {
                             <li className="nav-item">
                                 <a className="nav-link colorTextTheme" href="/#">Planes Premium</a>
                             </li>
-                            <li className="nav-item colorTextTheme" style={{ height: 41 }}>
+                            <li className="nav-item colorTextTheme dar-mode-switch-nav-movile" style={{ height: 41 }}>
                                 Modo Oscuro
                                 <input id="switchMobile" checked={theme === "dark" ? true : false} type="checkbox" onChange={(e) => setTheme()} />
                                 <label className="contentSwitchMobile" htmlFor="switch">
@@ -94,7 +97,7 @@ const NavMobile = (props) => {
                                 <a className="nav-link disabled" href="/#" tabIndex="-1" aria-disabled="true">Disabled</a>
                             </li> */}
                         </ul>
-                        <form className="">
+                        {/* <form className="">
                             <AutoComplete
                                 inputClassName="inputSearchJobMobile"
                                 value={selectedJob1}
@@ -105,7 +108,7 @@ const NavMobile = (props) => {
                                 onChange={(e) => setSelectedJob1(e.value)}
                             />
                             <button className="btn btn-outline-danger btnSearchMobile" type="submit">Buscar</button>
-                        </form>
+                        </form> */}
                     </div>
                 </div>
             </nav>
@@ -113,6 +116,9 @@ const NavMobile = (props) => {
 
     )
 
+    function goTo(to) {
+        history.push(to)
+    }
 }
 
-export default NavMobile;
+export default React.memo(NavMobile);

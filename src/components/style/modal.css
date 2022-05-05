@@ -1,9 +1,16 @@
 .goThereModal {
   background: #007dc0 !important;
-  border-color: white !important;
+  border-color: transparent !important;
   color: white !important;
   border-radius: 6px !important;
 }
+
+.goThereModal:active, 
+.goThereModal:focus 
+{
+    border:none!important; /* here configure as your needs */
+    color:transparent !important;
+ }
 
 .p-dialog-title {
   color: #007dc0;

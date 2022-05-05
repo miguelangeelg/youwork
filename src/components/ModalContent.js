@@ -1,4 +1,4 @@
-import React from "react";
+// import React from "react";
 // import img1 from '../assets/img/modal/jobModal.svg';
 // import img2 from '../assets/img/modal/jobModal2.svg';
 // import img3 from '../assets/img/modal/jobModal3.svg';

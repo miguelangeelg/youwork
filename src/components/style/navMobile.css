@@ -74,17 +74,29 @@
 
 .navMobile li:hover a {
   color: #007dc0 !important;
+  cursor: pointer;
 }
 
 .navMobile .container-fluid {
   background: rgb(255, 255, 255);
+  border-radius: 20px;
+}
+
+.navMobile li .nav-link {
+  width: fit-content;
+  font-size: 19px;
+}
+
+.dar-mode-switch-nav-movile{
+  width: fit-content;
+  font-size: 19px;
 }
 
 .navMobile li i {
   height: 50px;
   min-width: 50px;
   border-radius: 6px;
-  text-align: center;
+  /* text-align: center; */
   font-size: 22px;
   position: relative;
   top: 13px;
@@ -93,8 +105,20 @@
 
 .navMobile li a {
   color: #757575;
-  align-items: center;
+  /* align-items: center; */
   text-decoration: none;
   transition: all 0.4s ease;
   border-radius: 6px;
 }
+
+
+.navbar-light .navbar-toggler{
+  border-color: transparent;
+}
+
+.navbar-toggler:active, 
+.navbar-toggler:focus 
+{
+    border:0.5em ; /* here configure as your needs */
+    color:transparent;
+ }
