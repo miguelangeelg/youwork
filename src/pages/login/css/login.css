@@ -85,7 +85,7 @@
 .login-image{
     width: 500px;
     position: absolute;
-    opacity: 50%;
+    opacity: 50% !important;
     top: 150px;
     left: 10%;
 }
