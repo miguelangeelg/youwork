@@ -36,6 +36,8 @@
   flex-wrap: nowrap;
   align-content: center;
   align-items: center;
+  position: relative;
+  left: 40px;
 }
 
 .login-component-email {
@@ -84,8 +86,8 @@
 
 .login-image{
     width: 500px;
-    position: absolute;
-    opacity: 50% !important;
-    top: 150px;
-    left: 10%;
+    position: relative;
+    /* opacity: 50% !important; */
+    top: 50px;
+    left: 0%;
 }
