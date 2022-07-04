@@ -72,14 +72,14 @@ const NavMobile = (props) => {
                             <li className="nav-item">
                                 <a className="nav-link colorTextTheme" href="/#">Planes premium</a>
                             </li>
-                            <li className="nav-item colorTextTheme dar-mode-switch-nav-movile" style={{ height: 41 }}>
+                            {/* <li className="nav-item colorTextTheme dar-mode-switch-nav-movile" style={{ height: 41 }}>
                                 Modo Oscuro
                                 <input id="switchMobile" checked={theme === "dark" ? true : false} type="checkbox" onChange={(e) => setTheme()} />
                                 <label className="contentSwitchMobile" htmlFor="switch">
                                     <div className="circleMobile">
                                     </div>
                                 </label>
-                            </li>
+                            </li> */}
 
 
                             {/* <li className="nav-item dropdown">

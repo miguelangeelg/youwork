@@ -55,18 +55,18 @@ const NavTop = (props) => {
                     <div className="col-10 contentNav">
                         <div className="collapse navbar-collapse float-right d-flex justify-content-end" id="navbarNav">
                             <ul className="navbar-nav">
-                                <li className="nav-item colorTextTheme" style={{ display: "flex", alignItems: "center" }}>
+                                {/* <li className="nav-item colorTextTheme" style={{ display: "flex", alignItems: "center" }}>
                                     Modo Oscuro
                                     <input id="switch" checked={theme === "dark" ? true : false} type="checkbox" onChange={(e) => setTheme()}/>
                                     <label className="contentSwitch" htmlFor="switch">
                                     <div className="circle">
                                     </div>
-                                    </label>
+                                    </label> */}
                                 {/* <p style={{margin:0, marginRight:10}}>Modo Oscuro</p>
                                     <InputSwitch
                                     //  checked={theme}
                                       onChange={(e) => setTheme()} /> */}
-                                </li>
+                                {/* </li> */}
                                 <li className="nav-item">
                                     <span className="tooltipProfile">Notificaciones</span>
                                     <i className='bx bxs-bell'></i>

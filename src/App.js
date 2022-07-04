@@ -1,89 +1,30 @@
-import Nav from "./components/navs/Nav";
-import NavChats from "./components/navs/NavChats";
-import Home from "./pages/home/Home";
-import SearchJob from "./pages/searchJob/SearchJob";
-import NavTop from "./components/navs/NavTop";
-import NavMobile from "./components/navs/NavMobile";
-import { BrowserRouter as Router, Route } from "react-router-dom";
-import "primereact/resources/themes/saga-blue/theme.css";
-import "primereact/resources/primereact.min.css";
-import "primeicons/primeicons.css";
-import { useState, useEffect } from "react";
+import { useReducer } from "react";
+import { AuthContext } from "./auth/AuthContext";
+import { authReducer } from "./auth/authReducer";
+import { useEffect, useState } from "react";
 import { GlobalStyles, lightTheme, darkTheme } from "./Theme";
 import styled, { ThemeProvider } from "styled-components";
+import AppRouter from "./routes/AppRouter";
 import "./style.css";
-
 const StyledApp = styled.div``;
 
+const init = () => {
+  return JSON.parse(localStorage.getItem("user")) || { logged: false };
+};
+
 function App() {
-  const [theme, setTheme] = useState("light");
+  const [user, dispatch] = useReducer(authReducer, {}, init);
 
   useEffect(() => {
-    if (localStorage.getItem("theme") === "dark") {
-      setTheme("dark");
-    } else {
-      setTheme("light");
-    }
-  }, []);
-
-  const themeToggle = () => {
-    if (theme === "light") {
-      setTheme("dark");
-      localStorage.setItem("theme", "dark");
-    } else {
-      setTheme("light");
-      localStorage.setItem("theme", "light");
-    }
-  };
-
-  const btnActive = () => {
-    let sidebar = document.querySelector(".sidebar");
-    sidebar.classList.toggle("active");
-    let colNav = document.querySelector(".colNav");
-
-    if (sidebar.className !== "componentTheme sidebar active") {
-      colNav.className = "col-2 colNav";
-    } else {
-      colNav.className = "col-3 colNav desktopStyle";
-    }
-  };
+    localStorage.setItem("user", JSON.stringify(user));
+  }, [user]);
 
   return (
-    <ThemeProvider theme={theme === "light" ? lightTheme : darkTheme}>
+    <ThemeProvider theme={lightTheme}>
       <GlobalStyles />
-      <StyledApp>
-        <Router>
-          <div className="container-fluid">
-            <div className="row mainDiv">
-              <div className="col-3 colNav desktopStyle">
-                <Nav btnActiveFunction={btnActive} />
-              </div>
-              <div className="col-8 content">
-                <div className="row">
-                  <div className="col desktopStyle">
-                    <NavTop theme={theme} setTheme={themeToggle} />
-                  </div>
-                  <div className="col mobileStyle">
-                    <NavMobile theme={theme} setTheme={themeToggle} />
-                  </div>
-                </div>
-                <div className="row contentPage" style={{ zIndex: 0 }}>
-                  <div className="col">
-                    <Route path="/" exact>
-                      <Home />
-                    </Route>
-                    <Route path="/searchJob" component={SearchJob} />
-                  </div>
-                </div>
-              </div>
-              <div className="col-2 d-flex justify-content-end colNavChat desktopStyle">
-                <NavChats />
-              </div>
-            </div>
-            {/* <Route path="/" exact component={Home}/>  */}
-          </div>
-        </Router>
-      </StyledApp>
+      <AuthContext.Provider value={{ user, dispatch }}>
+        <AppRouter />
+      </AuthContext.Provider>
     </ThemeProvider>
   );
 }
