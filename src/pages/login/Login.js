@@ -15,6 +15,7 @@ export const Login = () => {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
   const [nImage, setNImage] = useState("");
+  const [correctLogin, setCorrectLogin] = useState(null);
   const [errors, setErrors] = useState({
     email: "",
     password: "",
@@ -34,7 +35,8 @@ export const Login = () => {
 
   const login = () => {
     validateForm();
-    if (errors) {
+
+    if (email.trim() === "" || password.trim() === "") {
       return;
     }
 
@@ -46,9 +48,10 @@ export const Login = () => {
           logged: "true",
         })
       );
+      setCorrectLogin(true);
       history.go("/");
     } else {
-      alert("wrong password");
+      setCorrectLogin(false);
     }
   };
 
@@ -138,6 +141,14 @@ export const Login = () => {
                 </label>
               </span>
               {getFormErrorMessage("password")}
+              {
+                correctLogin === false ? 
+                (
+                  <small className="p-error p-error-message">Datos incorrectos</small>
+                ) : (
+                  <div></div>
+                )
+              }
             </div>
             <div className="login-component-button">
               <Button
