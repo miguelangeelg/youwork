@@ -36,15 +36,24 @@
   flex-wrap: nowrap;
   align-content: center;
   align-items: center;
-
 }
 
 .login-component-email {
   margin-top: 90px;
+  display: flex;
+  flex-direction: column;
+  align-content: center;
+  justify-content: center;
+  flex-wrap: nowrap;
 }
 
 .login-component-password {
   margin-top: 25px;
+  display: flex;
+  flex-direction: column;
+  align-content: center;
+  justify-content: center;
+  flex-wrap: nowrap;
 }
 
 .input-text {
@@ -74,31 +83,41 @@
   box-shadow: none !important;
 }
 
-
-.login-component-columns{
-    display: flex;
+.login-component-columns {
+  display: flex;
 }
 
+.login-image {
+  width: 500px;
+  position: relative;
+  /* opacity: 50% !important; */
+  top: 50px;
+  left: 0%;
+}
 
-
-.login-image{
-    width: 500px;
-    position: relative;
-    /* opacity: 50% !important; */
-    top: 50px;
-    left: 0%;
+.login-component-image {
+  display: flex;
 }
 
 @media (max-width: 1147px) {
-    .login-component-image{
-        display: none;
-    }
+  .login-component-image {
+    display: none;
+  }
 }
 
 @media (min-width: 1147px) {
-    .login-component-body {
-        left: 40px;
-        position: relative;
-        left: 40px;
-        }
+  .login-component-body {
+    left: 40px;
+    position: relative;
+    left: 40px;
+  }
+}
+
+.p-error {
+  color: #cc0000 !important;
+}
+
+
+.p-error-message{
+    font-size: 11px;
 }

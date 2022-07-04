@@ -1,7 +1,7 @@
 import React, { useContext } from "react";
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 import { AuthContext } from "../auth/AuthContext";
-import Login from "../pages/login/Login";
+import {Login} from "../pages/login/Login";
 import { DashboardRoutes } from "./DashboardRoutes";
 import PrivateRoutes from "./PrivateRoutes";
 import PublicRoutes from "./PublicRoutes";
