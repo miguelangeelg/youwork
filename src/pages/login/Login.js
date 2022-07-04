@@ -7,6 +7,7 @@ import imageOne from "../../assets/img/login/login-1.svg";
 import imageTwo from "../../assets/img/login/login-2.svg";
 import imageThree from "../../assets/img/login/login-3.svg";
 import imageFour from "../../assets/img/login/login-4.svg";
+import {useHistory } from 'react-router-dom'
 
 export default function Login() {
   $(document).ready(function () {
@@ -26,6 +27,21 @@ export default function Login() {
     setNImage(Math.floor(Math.random() * 4));
     imageToShow = imageFour[nImage]
   },[])
+
+  const history = useHistory(); 
+
+  const login = () => {
+    if(email === "miguelangelofl@hotmail.com" && password === "12345") {
+
+      localStorage.setItem('user', JSON.stringify({
+        "user": "miguel",
+        "logged": "true"
+      }))
+      history.go('/')
+    } else {
+      alert("wrong password")
+    }
+  }
 
   return (
     <div className="login-container">
@@ -63,7 +79,7 @@ export default function Login() {
               </span>
             </div>
             <div className="login-component-button">
-              <Button label="Iniciar sesión" className="button-primary" />
+              <Button label="Iniciar sesión" className="button-primary" onClick={()=>{login()}} />
             </div>
           </div>
         </div>

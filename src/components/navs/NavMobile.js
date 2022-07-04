@@ -19,6 +19,10 @@ const NavMobile = (props) => {
         { "name": "Aseadora" }, { "name": "Desarrollador" }, { "name": "Conductor" }, { "name": "Archivista" }
     ];
 
+    const logout = () => {
+        localStorage.removeItem("user");
+        history.go('/login');
+    }
     const searchJob = (event) => {
 
 
@@ -69,8 +73,8 @@ const NavMobile = (props) => {
                             <li className="nav-item">
                                 <a className="nav-link colorTextTheme" href="/#">Aplicaciones</a>
                             </li>
-                            <li className="nav-item">
-                                <a className="nav-link colorTextTheme" href="/#">Planes premium</a>
+                            <li className="nav-item" onClick={()=> {logout()}}>
+                                <a className="nav-link colorTextTheme">Planes premium</a>
                             </li>
                             {/* <li className="nav-item colorTextTheme dar-mode-switch-nav-movile" style={{ height: 41 }}>
                                 Modo Oscuro
