@@ -42,7 +42,7 @@ export const Login = () => {
 
     if (email === "miguelangelofl@hotmail.com" && password === "12345") {
       localStorage.setItem(
-        "user",
+        "user", 
         JSON.stringify({
           user: "miguel",
           logged: "true",
